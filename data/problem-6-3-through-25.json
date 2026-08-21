@@ -1,0 +1,801 @@
+{
+  "claim_status": "finite evidence only; Problem 6.3 not proved",
+  "counterexample_count": 0,
+  "endpoint_count": 99,
+  "endpoints": [
+    {
+      "a": 2,
+      "b": 1,
+      "band_graph_class_count": 1,
+      "lagrange_level_count": 1,
+      "path_count": 1,
+      "reflection_fixed_count": 1
+    },
+    {
+      "a": 3,
+      "b": 1,
+      "band_graph_class_count": 1,
+      "lagrange_level_count": 1,
+      "path_count": 1,
+      "reflection_fixed_count": 1
+    },
+    {
+      "a": 3,
+      "b": 2,
+      "band_graph_class_count": 2,
+      "lagrange_level_count": 2,
+      "path_count": 2,
+      "reflection_fixed_count": 2
+    },
+    {
+      "a": 4,
+      "b": 1,
+      "band_graph_class_count": 1,
+      "lagrange_level_count": 1,
+      "path_count": 1,
+      "reflection_fixed_count": 1
+    },
+    {
+      "a": 5,
+      "b": 1,
+      "band_graph_class_count": 1,
+      "lagrange_level_count": 1,
+      "path_count": 1,
+      "reflection_fixed_count": 1
+    },
+    {
+      "a": 4,
+      "b": 3,
+      "band_graph_class_count": 4,
+      "lagrange_level_count": 4,
+      "path_count": 5,
+      "reflection_fixed_count": 3
+    },
+    {
+      "a": 5,
+      "b": 2,
+      "band_graph_class_count": 3,
+      "lagrange_level_count": 3,
+      "path_count": 3,
+      "reflection_fixed_count": 3
+    },
+    {
+      "a": 6,
+      "b": 1,
+      "band_graph_class_count": 1,
+      "lagrange_level_count": 1,
+      "path_count": 1,
+      "reflection_fixed_count": 1
+    },
+    {
+      "a": 5,
+      "b": 3,
+      "band_graph_class_count": 5,
+      "lagrange_level_count": 5,
+      "path_count": 7,
+      "reflection_fixed_count": 3
+    },
+    {
+      "a": 7,
+      "b": 1,
+      "band_graph_class_count": 1,
+      "lagrange_level_count": 1,
+      "path_count": 1,
+      "reflection_fixed_count": 1
+    },
+    {
+      "a": 5,
+      "b": 4,
+      "band_graph_class_count": 10,
+      "lagrange_level_count": 10,
+      "path_count": 14,
+      "reflection_fixed_count": 6
+    },
+    {
+      "a": 7,
+      "b": 2,
+      "band_graph_class_count": 4,
+      "lagrange_level_count": 4,
+      "path_count": 4,
+      "reflection_fixed_count": 4
+    },
+    {
+      "a": 8,
+      "b": 1,
+      "band_graph_class_count": 1,
+      "lagrange_level_count": 1,
+      "path_count": 1,
+      "reflection_fixed_count": 1
+    },
+    {
+      "a": 7,
+      "b": 3,
+      "band_graph_class_count": 8,
+      "lagrange_level_count": 8,
+      "path_count": 12,
+      "reflection_fixed_count": 4
+    },
+    {
+      "a": 9,
+      "b": 1,
+      "band_graph_class_count": 1,
+      "lagrange_level_count": 1,
+      "path_count": 1,
+      "reflection_fixed_count": 1
+    },
+    {
+      "a": 6,
+      "b": 5,
+      "band_graph_class_count": 26,
+      "lagrange_level_count": 26,
+      "path_count": 42,
+      "reflection_fixed_count": 10
+    },
+    {
+      "a": 7,
+      "b": 4,
+      "band_graph_class_count": 20,
+      "lagrange_level_count": 20,
+      "path_count": 30,
+      "reflection_fixed_count": 10
+    },
+    {
+      "a": 8,
+      "b": 3,
+      "band_graph_class_count": 10,
+      "lagrange_level_count": 10,
+      "path_count": 15,
+      "reflection_fixed_count": 5
+    },
+    {
+      "a": 9,
+      "b": 2,
+      "band_graph_class_count": 5,
+      "lagrange_level_count": 5,
+      "path_count": 5,
+      "reflection_fixed_count": 5
+    },
+    {
+      "a": 10,
+      "b": 1,
+      "band_graph_class_count": 1,
+      "lagrange_level_count": 1,
+      "path_count": 1,
+      "reflection_fixed_count": 1
+    },
+    {
+      "a": 7,
+      "b": 5,
+      "band_graph_class_count": 38,
+      "lagrange_level_count": 38,
+      "path_count": 66,
+      "reflection_fixed_count": 10
+    },
+    {
+      "a": 11,
+      "b": 1,
+      "band_graph_class_count": 1,
+      "lagrange_level_count": 1,
+      "path_count": 1,
+      "reflection_fixed_count": 1
+    },
+    {
+      "a": 7,
+      "b": 6,
+      "band_graph_class_count": 76,
+      "lagrange_level_count": 76,
+      "path_count": 132,
+      "reflection_fixed_count": 20
+    },
+    {
+      "a": 8,
+      "b": 5,
+      "band_graph_class_count": 57,
+      "lagrange_level_count": 57,
+      "path_count": 99,
+      "reflection_fixed_count": 15
+    },
+    {
+      "a": 9,
+      "b": 4,
+      "band_graph_class_count": 35,
+      "lagrange_level_count": 35,
+      "path_count": 55,
+      "reflection_fixed_count": 15
+    },
+    {
+      "a": 10,
+      "b": 3,
+      "band_graph_class_count": 14,
+      "lagrange_level_count": 14,
+      "path_count": 22,
+      "reflection_fixed_count": 6
+    },
+    {
+      "a": 11,
+      "b": 2,
+      "band_graph_class_count": 6,
+      "lagrange_level_count": 6,
+      "path_count": 6,
+      "reflection_fixed_count": 6
+    },
+    {
+      "a": 12,
+      "b": 1,
+      "band_graph_class_count": 1,
+      "lagrange_level_count": 1,
+      "path_count": 1,
+      "reflection_fixed_count": 1
+    },
+    {
+      "a": 9,
+      "b": 5,
+      "band_graph_class_count": 79,
+      "lagrange_level_count": 79,
+      "path_count": 143,
+      "reflection_fixed_count": 15
+    },
+    {
+      "a": 11,
+      "b": 3,
+      "band_graph_class_count": 16,
+      "lagrange_level_count": 16,
+      "path_count": 26,
+      "reflection_fixed_count": 6
+    },
+    {
+      "a": 13,
+      "b": 1,
+      "band_graph_class_count": 1,
+      "lagrange_level_count": 1,
+      "path_count": 1,
+      "reflection_fixed_count": 1
+    },
+    {
+      "a": 8,
+      "b": 7,
+      "band_graph_class_count": 232,
+      "lagrange_level_count": 232,
+      "path_count": 429,
+      "reflection_fixed_count": 35
+    },
+    {
+      "a": 11,
+      "b": 4,
+      "band_graph_class_count": 56,
+      "lagrange_level_count": 56,
+      "path_count": 91,
+      "reflection_fixed_count": 21
+    },
+    {
+      "a": 13,
+      "b": 2,
+      "band_graph_class_count": 7,
+      "lagrange_level_count": 7,
+      "path_count": 7,
+      "reflection_fixed_count": 7
+    },
+    {
+      "a": 14,
+      "b": 1,
+      "band_graph_class_count": 1,
+      "lagrange_level_count": 1,
+      "path_count": 1,
+      "reflection_fixed_count": 1
+    },
+    {
+      "a": 9,
+      "b": 7,
+      "band_graph_class_count": 375,
+      "lagrange_level_count": 375,
+      "path_count": 715,
+      "reflection_fixed_count": 35
+    },
+    {
+      "a": 11,
+      "b": 5,
+      "band_graph_class_count": 147,
+      "lagrange_level_count": 147,
+      "path_count": 273,
+      "reflection_fixed_count": 21
+    },
+    {
+      "a": 13,
+      "b": 3,
+      "band_graph_class_count": 21,
+      "lagrange_level_count": 21,
+      "path_count": 35,
+      "reflection_fixed_count": 7
+    },
+    {
+      "a": 15,
+      "b": 1,
+      "band_graph_class_count": 1,
+      "lagrange_level_count": 1,
+      "path_count": 1,
+      "reflection_fixed_count": 1
+    },
+    {
+      "a": 9,
+      "b": 8,
+      "band_graph_class_count": 750,
+      "lagrange_level_count": 750,
+      "path_count": 1430,
+      "reflection_fixed_count": 70
+    },
+    {
+      "a": 10,
+      "b": 7,
+      "band_graph_class_count": 600,
+      "lagrange_level_count": 600,
+      "path_count": 1144,
+      "reflection_fixed_count": 56
+    },
+    {
+      "a": 11,
+      "b": 6,
+      "band_graph_class_count": 392,
+      "lagrange_level_count": 392,
+      "path_count": 728,
+      "reflection_fixed_count": 56
+    },
+    {
+      "a": 12,
+      "b": 5,
+      "band_graph_class_count": 196,
+      "lagrange_level_count": 196,
+      "path_count": 364,
+      "reflection_fixed_count": 28
+    },
+    {
+      "a": 13,
+      "b": 4,
+      "band_graph_class_count": 84,
+      "lagrange_level_count": 84,
+      "path_count": 140,
+      "reflection_fixed_count": 28
+    },
+    {
+      "a": 14,
+      "b": 3,
+      "band_graph_class_count": 24,
+      "lagrange_level_count": 24,
+      "path_count": 40,
+      "reflection_fixed_count": 8
+    },
+    {
+      "a": 15,
+      "b": 2,
+      "band_graph_class_count": 8,
+      "lagrange_level_count": 8,
+      "path_count": 8,
+      "reflection_fixed_count": 8
+    },
+    {
+      "a": 16,
+      "b": 1,
+      "band_graph_class_count": 1,
+      "lagrange_level_count": 1,
+      "path_count": 1,
+      "reflection_fixed_count": 1
+    },
+    {
+      "a": 11,
+      "b": 7,
+      "band_graph_class_count": 912,
+      "lagrange_level_count": 912,
+      "path_count": 1768,
+      "reflection_fixed_count": 56
+    },
+    {
+      "a": 13,
+      "b": 5,
+      "band_graph_class_count": 252,
+      "lagrange_level_count": 252,
+      "path_count": 476,
+      "reflection_fixed_count": 28
+    },
+    {
+      "a": 17,
+      "b": 1,
+      "band_graph_class_count": 1,
+      "lagrange_level_count": 1,
+      "path_count": 1,
+      "reflection_fixed_count": 1
+    },
+    {
+      "a": 10,
+      "b": 9,
+      "band_graph_class_count": 2494,
+      "lagrange_level_count": 2494,
+      "path_count": 4862,
+      "reflection_fixed_count": 126
+    },
+    {
+      "a": 11,
+      "b": 8,
+      "band_graph_class_count": 2052,
+      "lagrange_level_count": 2052,
+      "path_count": 3978,
+      "reflection_fixed_count": 126
+    },
+    {
+      "a": 12,
+      "b": 7,
+      "band_graph_class_count": 1368,
+      "lagrange_level_count": 1368,
+      "path_count": 2652,
+      "reflection_fixed_count": 84
+    },
+    {
+      "a": 13,
+      "b": 6,
+      "band_graph_class_count": 756,
+      "lagrange_level_count": 756,
+      "path_count": 1428,
+      "reflection_fixed_count": 84
+    },
+    {
+      "a": 14,
+      "b": 5,
+      "band_graph_class_count": 324,
+      "lagrange_level_count": 324,
+      "path_count": 612,
+      "reflection_fixed_count": 36
+    },
+    {
+      "a": 15,
+      "b": 4,
+      "band_graph_class_count": 120,
+      "lagrange_level_count": 120,
+      "path_count": 204,
+      "reflection_fixed_count": 36
+    },
+    {
+      "a": 16,
+      "b": 3,
+      "band_graph_class_count": 30,
+      "lagrange_level_count": 30,
+      "path_count": 51,
+      "reflection_fixed_count": 9
+    },
+    {
+      "a": 17,
+      "b": 2,
+      "band_graph_class_count": 9,
+      "lagrange_level_count": 9,
+      "path_count": 9,
+      "reflection_fixed_count": 9
+    },
+    {
+      "a": 18,
+      "b": 1,
+      "band_graph_class_count": 1,
+      "lagrange_level_count": 1,
+      "path_count": 1,
+      "reflection_fixed_count": 1
+    },
+    {
+      "a": 11,
+      "b": 9,
+      "band_graph_class_count": 4262,
+      "lagrange_level_count": 4262,
+      "path_count": 8398,
+      "reflection_fixed_count": 126
+    },
+    {
+      "a": 13,
+      "b": 7,
+      "band_graph_class_count": 1980,
+      "lagrange_level_count": 1980,
+      "path_count": 3876,
+      "reflection_fixed_count": 84
+    },
+    {
+      "a": 17,
+      "b": 3,
+      "band_graph_class_count": 33,
+      "lagrange_level_count": 33,
+      "path_count": 57,
+      "reflection_fixed_count": 9
+    },
+    {
+      "a": 19,
+      "b": 1,
+      "band_graph_class_count": 1,
+      "lagrange_level_count": 1,
+      "path_count": 1,
+      "reflection_fixed_count": 1
+    },
+    {
+      "a": 11,
+      "b": 10,
+      "band_graph_class_count": 8524,
+      "lagrange_level_count": 8524,
+      "path_count": 16796,
+      "reflection_fixed_count": 252
+    },
+    {
+      "a": 13,
+      "b": 8,
+      "band_graph_class_count": 4950,
+      "lagrange_level_count": 4950,
+      "path_count": 9690,
+      "reflection_fixed_count": 210
+    },
+    {
+      "a": 16,
+      "b": 5,
+      "band_graph_class_count": 507,
+      "lagrange_level_count": 507,
+      "path_count": 969,
+      "reflection_fixed_count": 45
+    },
+    {
+      "a": 17,
+      "b": 4,
+      "band_graph_class_count": 165,
+      "lagrange_level_count": 165,
+      "path_count": 285,
+      "reflection_fixed_count": 45
+    },
+    {
+      "a": 19,
+      "b": 2,
+      "band_graph_class_count": 10,
+      "lagrange_level_count": 10,
+      "path_count": 10,
+      "reflection_fixed_count": 10
+    },
+    {
+      "a": 20,
+      "b": 1,
+      "band_graph_class_count": 1,
+      "lagrange_level_count": 1,
+      "path_count": 1,
+      "reflection_fixed_count": 1
+    },
+    {
+      "a": 13,
+      "b": 9,
+      "band_graph_class_count": 11410,
+      "lagrange_level_count": 11410,
+      "path_count": 22610,
+      "reflection_fixed_count": 210
+    },
+    {
+      "a": 15,
+      "b": 7,
+      "band_graph_class_count": 3936,
+      "lagrange_level_count": 3936,
+      "path_count": 7752,
+      "reflection_fixed_count": 120
+    },
+    {
+      "a": 17,
+      "b": 5,
+      "band_graph_class_count": 621,
+      "lagrange_level_count": 621,
+      "path_count": 1197,
+      "reflection_fixed_count": 45
+    },
+    {
+      "a": 19,
+      "b": 3,
+      "band_graph_class_count": 40,
+      "lagrange_level_count": 40,
+      "path_count": 70,
+      "reflection_fixed_count": 10
+    },
+    {
+      "a": 21,
+      "b": 1,
+      "band_graph_class_count": 1,
+      "lagrange_level_count": 1,
+      "path_count": 1,
+      "reflection_fixed_count": 1
+    },
+    {
+      "a": 12,
+      "b": 11,
+      "band_graph_class_count": 29624,
+      "lagrange_level_count": 29624,
+      "path_count": 58786,
+      "reflection_fixed_count": 462
+    },
+    {
+      "a": 13,
+      "b": 10,
+      "band_graph_class_count": 25102,
+      "lagrange_level_count": 25102,
+      "path_count": 49742,
+      "reflection_fixed_count": 462
+    },
+    {
+      "a": 14,
+      "b": 9,
+      "band_graph_class_count": 17930,
+      "lagrange_level_count": 17930,
+      "path_count": 35530,
+      "reflection_fixed_count": 330
+    },
+    {
+      "a": 15,
+      "b": 8,
+      "band_graph_class_count": 10824,
+      "lagrange_level_count": 10824,
+      "path_count": 21318,
+      "reflection_fixed_count": 330
+    },
+    {
+      "a": 16,
+      "b": 7,
+      "band_graph_class_count": 5412,
+      "lagrange_level_count": 5412,
+      "path_count": 10659,
+      "reflection_fixed_count": 165
+    },
+    {
+      "a": 17,
+      "b": 6,
+      "band_graph_class_count": 2277,
+      "lagrange_level_count": 2277,
+      "path_count": 4389,
+      "reflection_fixed_count": 165
+    },
+    {
+      "a": 18,
+      "b": 5,
+      "band_graph_class_count": 759,
+      "lagrange_level_count": 759,
+      "path_count": 1463,
+      "reflection_fixed_count": 55
+    },
+    {
+      "a": 19,
+      "b": 4,
+      "band_graph_class_count": 220,
+      "lagrange_level_count": 220,
+      "path_count": 385,
+      "reflection_fixed_count": 55
+    },
+    {
+      "a": 20,
+      "b": 3,
+      "band_graph_class_count": 44,
+      "lagrange_level_count": 44,
+      "path_count": 77,
+      "reflection_fixed_count": 11
+    },
+    {
+      "a": 21,
+      "b": 2,
+      "band_graph_class_count": 11,
+      "lagrange_level_count": 11,
+      "path_count": 11,
+      "reflection_fixed_count": 11
+    },
+    {
+      "a": 22,
+      "b": 1,
+      "band_graph_class_count": 1,
+      "lagrange_level_count": 1,
+      "path_count": 1,
+      "reflection_fixed_count": 1
+    },
+    {
+      "a": 13,
+      "b": 11,
+      "band_graph_class_count": 52234,
+      "lagrange_level_count": 52234,
+      "path_count": 104006,
+      "reflection_fixed_count": 462
+    },
+    {
+      "a": 17,
+      "b": 7,
+      "band_graph_class_count": 7293,
+      "lagrange_level_count": 7293,
+      "path_count": 14421,
+      "reflection_fixed_count": 165
+    },
+    {
+      "a": 19,
+      "b": 5,
+      "band_graph_class_count": 913,
+      "lagrange_level_count": 913,
+      "path_count": 1771,
+      "reflection_fixed_count": 55
+    },
+    {
+      "a": 23,
+      "b": 1,
+      "band_graph_class_count": 1,
+      "lagrange_level_count": 1,
+      "path_count": 1,
+      "reflection_fixed_count": 1
+    },
+    {
+      "a": 13,
+      "b": 12,
+      "band_graph_class_count": 104468,
+      "lagrange_level_count": 104468,
+      "path_count": 208012,
+      "reflection_fixed_count": 924
+    },
+    {
+      "a": 14,
+      "b": 11,
+      "band_graph_class_count": 89544,
+      "lagrange_level_count": 89544,
+      "path_count": 178296,
+      "reflection_fixed_count": 792
+    },
+    {
+      "a": 16,
+      "b": 9,
+      "band_graph_class_count": 41107,
+      "lagrange_level_count": 41107,
+      "path_count": 81719,
+      "reflection_fixed_count": 495
+    },
+    {
+      "a": 17,
+      "b": 8,
+      "band_graph_class_count": 21879,
+      "lagrange_level_count": 21879,
+      "path_count": 43263,
+      "reflection_fixed_count": 495
+    },
+    {
+      "a": 18,
+      "b": 7,
+      "band_graph_class_count": 9724,
+      "lagrange_level_count": 9724,
+      "path_count": 19228,
+      "reflection_fixed_count": 220
+    },
+    {
+      "a": 19,
+      "b": 6,
+      "band_graph_class_count": 3652,
+      "lagrange_level_count": 3652,
+      "path_count": 7084,
+      "reflection_fixed_count": 220
+    },
+    {
+      "a": 21,
+      "b": 4,
+      "band_graph_class_count": 286,
+      "lagrange_level_count": 286,
+      "path_count": 506,
+      "reflection_fixed_count": 66
+    },
+    {
+      "a": 22,
+      "b": 3,
+      "band_graph_class_count": 52,
+      "lagrange_level_count": 52,
+      "path_count": 92,
+      "reflection_fixed_count": 12
+    },
+    {
+      "a": 23,
+      "b": 2,
+      "band_graph_class_count": 12,
+      "lagrange_level_count": 12,
+      "path_count": 12,
+      "reflection_fixed_count": 12
+    },
+    {
+      "a": 24,
+      "b": 1,
+      "band_graph_class_count": 1,
+      "lagrange_level_count": 1,
+      "path_count": 1,
+      "reflection_fixed_count": 1
+    }
+  ],
+  "max_total_length": 25,
+  "path_count": 934635
+}

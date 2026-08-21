@@ -1,0 +1,30 @@
+import LatticePathOrders.GeneratedMinimality_11_8_Part006_Region0024
+import LatticePathOrders.GeneratedMinimality_11_8_Part006_Region0025
+import LatticePathOrders.GeneratedMinimality_11_8_Part006_Region0026
+import LatticePathOrders.GeneratedMinimality_11_8_Part006_Region0027
+
+set_option maxRecDepth 1000000
+set_option maxHeartbeats 0
+
+namespace LatticePathOrders.GeneratedMinimality_11_8
+
+def regionsPart006 : List (Path × Nat × AssignmentTree) := [
+  (mustParsePath "RRRRRUURRU", 9, region_0024),
+  (mustParsePath "RRRRRUURUR", 9, region_0025),
+  (mustParsePath "RRRRRUURUU", 9, region_0026),
+  (mustParsePath "RRRRRUUURR", 9, region_0027)
+]
+
+theorem regionsPart006_valid : ∀ region ∈ regionsPart006,
+    region.1.length + region.2.1 = 19 ∧
+      region.2.2.check 11 8 classes region.2.1 region.1 = true := by
+  intro region h
+  simp only [regionsPart006, List.mem_cons, List.mem_nil_iff, or_false] at h
+  rcases h with rfl | rfl | rfl | rfl
+  · exact ⟨by decide, region_0024_check⟩
+  · exact ⟨by decide, region_0025_check⟩
+  · exact ⟨by decide, region_0026_check⟩
+  · exact ⟨by decide, region_0027_check⟩
+
+end LatticePathOrders.GeneratedMinimality_11_8
+

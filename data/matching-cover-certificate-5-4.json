@@ -1,0 +1,170 @@
+{
+  "a": 5,
+  "b": 4,
+  "certificate_frontier_size": 12,
+  "claim_status": "exact prefix-antichain cover certificate",
+  "disposition_counts": {
+    "at_or_above_upper_level": 3,
+    "at_or_below_lower_level": 9
+  },
+  "expanded_prefix_count": 22,
+  "frontier": [
+    {
+      "disposition": "at_or_below_lower_level",
+      "lower_bound": [
+        985,
+        1
+      ],
+      "prefix": "RRURUR",
+      "upper_bound": [
+        1142,
+        1
+      ]
+    },
+    {
+      "disposition": "at_or_below_lower_level",
+      "lower_bound": [
+        1103,
+        1
+      ],
+      "prefix": "RRURRUUR",
+      "upper_bound": [
+        1103,
+        1
+      ]
+    },
+    {
+      "disposition": "at_or_below_lower_level",
+      "lower_bound": [
+        1045,
+        1
+      ],
+      "prefix": "RRURRUR",
+      "upper_bound": [
+        1120,
+        1
+      ]
+    },
+    {
+      "disposition": "at_or_below_lower_level",
+      "lower_bound": [
+        1130,
+        1
+      ],
+      "prefix": "RRURRRU",
+      "upper_bound": [
+        1205,
+        1
+      ]
+    },
+    {
+      "disposition": "at_or_below_lower_level",
+      "lower_bound": [
+        1115,
+        1
+      ],
+      "prefix": "RRRUURU",
+      "upper_bound": [
+        1195,
+        1
+      ]
+    },
+    {
+      "disposition": "at_or_below_lower_level",
+      "lower_bound": [
+        1177,
+        1
+      ],
+      "prefix": "RRRUURRU",
+      "upper_bound": [
+        1177,
+        1
+      ]
+    },
+    {
+      "disposition": "at_or_below_lower_level",
+      "lower_bound": [
+        1117,
+        1
+      ],
+      "prefix": "RRRURUUR",
+      "upper_bound": [
+        1117,
+        1
+      ]
+    },
+    {
+      "disposition": "at_or_below_lower_level",
+      "lower_bound": [
+        1055,
+        1
+      ],
+      "prefix": "RRRURUR",
+      "upper_bound": [
+        1130,
+        1
+      ]
+    },
+    {
+      "disposition": "at_or_below_lower_level",
+      "lower_bound": [
+        1120,
+        1
+      ],
+      "prefix": "RRRURRU",
+      "upper_bound": [
+        1195,
+        1
+      ]
+    },
+    {
+      "disposition": "at_or_above_upper_level",
+      "lower_bound": [
+        1207,
+        1
+      ],
+      "prefix": "RRRRUU",
+      "upper_bound": [
+        1429,
+        1
+      ]
+    },
+    {
+      "disposition": "at_or_above_upper_level",
+      "lower_bound": [
+        1223,
+        1
+      ],
+      "prefix": "RRRRURUU",
+      "upper_bound": [
+        1223,
+        1
+      ]
+    },
+    {
+      "disposition": "at_or_above_upper_level",
+      "lower_bound": [
+        1238,
+        1
+      ],
+      "prefix": "RRRRR",
+      "upper_bound": [
+        1597,
+        1
+      ]
+    }
+  ],
+  "intermediate_witness": null,
+  "is_cover": true,
+  "lower_path": "RRURRRUUU",
+  "lower_score": [
+    1205,
+    1
+  ],
+  "order": "matching",
+  "upper_path": "RRRRUURUU",
+  "upper_score": [
+    1207,
+    1
+  ]
+}

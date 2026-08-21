@@ -1,0 +1,59 @@
+import LatticePathOrders.GeneratedMinimality_18_5_Data
+import LatticePathOrders.MinimalityCertificate
+
+set_option maxRecDepth 1000000
+set_option maxHeartbeats 0
+
+namespace LatticePathOrders.GeneratedMinimality_18_5
+
+def region_0036 : AssignmentTree :=
+  (.node (some (.node (some (.node (some (.node (some (.node (some (.node (some (.node none (some (.node none (some (.node none (some (.leaf 681 false 0)))))))) (some (.node (some (.node none (some (.node none (some (.leaf 592 true 5)))))) (some (.node (some (.node none (some (.leaf 592 false 0)))) none)))))) (some (.node (some (.node (some (.node none (some (.node none (some (.leaf 492 true 6)))))) (some (.node (some (.node none (some (.leaf 210 true 6)))) none)))) (some (.node (some (.node (some (.node none (some (.leaf 472 true 6)))) none)) none)))))) (some (.node (some (.node (some (.node (some (.node none (some (.node none (some (.leaf 418 false 0)))))) (some (.node (some (.node none (some (.leaf 170 false 0)))) none)))) (some (.node (some (.node (some (.node none (some (.leaf 72 false 0)))) none)) none)))) (some (.node (some (.node (some (.node (some (.node none (some (.leaf 283 false 0)))) none)) none)) none)))))) (some (.node (some (.node (some (.node (some (.node (some (.node none (some (.node none (some (.leaf 325 false 0)))))) (some (.node (some (.node none (some (.leaf 108 false 0)))) none)))) (some (.node (some (.node (some (.node none (some (.leaf 50 false 0)))) none)) none)))) (some (.node (some (.node (some (.node (some (.node none (some (.leaf 70 false 0)))) none)) none)) none)))) none)))) (some (.node (some (.node (some (.node (some (.node (some (.node (some (.node none (some (.node none (some (.leaf 318 false 0)))))) (some (.node (some (.node none (some (.leaf 131 false 0)))) none)))) (some (.node (some (.node (some (.node none (some (.leaf 149 false 0)))) none)) none)))) (some (.node (some (.node (some (.node (some (.node none (some (.leaf 183 false 0)))) none)) none)) none)))) none)) none)))) (some (.node (some (.node (some (.node (some (.node (some (.node (some (.node (some (.node none (some (.node none (some (.leaf 343 false 0)))))) (some (.node (some (.node none (some (.leaf 360 false 0)))) none)))) (some (.node (some (.node (some (.node none (some (.leaf 388 false 0)))) none)) none)))) (some (.node (some (.node (some (.node (some (.node none (some (.leaf 437 false 0)))) none)) none)) none)))) none)) none)) none)))
+
+theorem region_0036_check :
+    AssignmentTree.check 18 5 classes 9 (mustParsePath "RRRRRURRRRRRRU") region_0036 = true := by
+  unfold region_0036
+  rfl
+
+def region_0037 : AssignmentTree :=
+  (.node (some (.node (some (.node (some (.node (some (.node (some (.node (some (.node (some (.node none (some (.node none (some (.node none (some (.leaf 685 false 0)))))))) (some (.node (some (.node none (some (.node none (some (.leaf 591 false 0)))))) (some (.node (some (.node none (some (.leaf 602 false 0)))) none)))))) (some (.node (some (.node (some (.node none (some (.node none (some (.leaf 491 true 6)))))) (some (.node (some (.node none (some (.leaf 209 false 0)))) none)))) (some (.node (some (.node (some (.node none (some (.leaf 491 false 0)))) none)) none)))))) (some (.node (some (.node (some (.node (some (.node none (some (.node none (some (.leaf 415 true 7)))))) (some (.node (some (.node none (some (.leaf 169 true 7)))) none)))) (some (.node (some (.node (some (.node none (some (.leaf 92 true 7)))) none)) none)))) (some (.node (some (.node (some (.node (some (.node none (some (.leaf 310 true 7)))) none)) none)) none)))))) (some (.node (some (.node (some (.node (some (.node (some (.node none (some (.node none (some (.leaf 324 false 0)))))) (some (.node (some (.node none (some (.leaf 107 false 0)))) none)))) (some (.node (some (.node (some (.node none (some (.leaf 27 false 0)))) none)) none)))) (some (.node (some (.node (some (.node (some (.node none (some (.leaf 63 false 0)))) none)) none)) none)))) none)))) (some (.node (some (.node (some (.node (some (.node (some (.node (some (.node none (some (.node none (some (.leaf 317 false 0)))))) (some (.node (some (.node none (some (.leaf 102 false 0)))) none)))) (some (.node (some (.node (some (.node none (some (.leaf 35 false 0)))) none)) none)))) (some (.node (some (.node (some (.node (some (.node none (some (.leaf 45 false 0)))) none)) none)) none)))) none)) none)))) (some (.node (some (.node (some (.node (some (.node (some (.node (some (.node (some (.node none (some (.node none (some (.leaf 331 false 0)))))) (some (.node (some (.node none (some (.leaf 114 false 0)))) none)))) (some (.node (some (.node (some (.node none (some (.leaf 119 false 0)))) none)) none)))) (some (.node (some (.node (some (.node (some (.node none (some (.leaf 143 false 0)))) none)) none)) none)))) none)) none)) none)))) (some (.node (some (.node (some (.node (some (.node (some (.node (some (.node (some (.node (some (.node none (some (.node none (some (.leaf 349 false 0)))))) (some (.node (some (.node none (some (.leaf 329 false 0)))) none)))) (some (.node (some (.node (some (.node none (some (.leaf 335 false 0)))) none)) none)))) (some (.node (some (.node (some (.node (some (.node none (some (.leaf 380 false 0)))) none)) none)) none)))) none)) none)) none)) none)))
+
+theorem region_0037_check :
+    AssignmentTree.check 18 5 classes 10 (mustParsePath "RRRRRURRRRRRU") region_0037 = true := by
+  unfold region_0037
+  rfl
+
+def region_0038 : AssignmentTree :=
+  (.node (some (.node (some (.node (some (.node (some (.node (some (.node (some (.node (some (.node (some (.node none (some (.node none (some (.node none (some (.leaf 699 false 0)))))))) (some (.node (some (.node none (some (.node none (some (.leaf 590 false 0)))))) (some (.node (some (.node none (some (.leaf 610 false 0)))) none)))))) (some (.node (some (.node (some (.node none (some (.node none (some (.leaf 490 false 0)))))) (some (.node (some (.node none (some (.leaf 214 false 0)))) none)))) (some (.node (some (.node (some (.node none (some (.leaf 501 false 0)))) none)) none)))))) (some (.node (some (.node (some (.node (some (.node none (some (.node none (some (.leaf 414 true 7)))))) (some (.node (some (.node none (some (.leaf 168 true 7)))) none)))) (some (.node (some (.node (some (.node none (some (.leaf 168 false 0)))) none)) none)))) (some (.node (some (.node (some (.node (some (.node none (some (.leaf 414 false 0)))) none)) none)) none)))))) (some (.node (some (.node (some (.node (some (.node (some (.node none (some (.node none (some (.leaf 323 true 3)))))) (some (.node (some (.node none (some (.leaf 106 true 8)))) none)))) (some (.node (some (.node (some (.node none (some (.leaf 26 true 8)))) none)) none)))) (some (.node (some (.node (some (.node (some (.node none (some (.leaf 84 true 8)))) none)) none)) none)))) none)))) (some (.node (some (.node (some (.node (some (.node (some (.node (some (.node none (some (.node none (some (.leaf 316 true 3)))))) (some (.node (some (.node none (some (.leaf 101 true 13)))) none)))) (some (.node (some (.node (some (.node none (some (.leaf 24 true 13)))) none)) none)))) (some (.node (some (.node (some (.node (some (.node none (some (.leaf 4 false 0)))) none)) none)) none)))) none)) none)))) (some (.node (some (.node (some (.node (some (.node (some (.node (some (.node (some (.node none (some (.node none (some (.leaf 332 false 0)))))) (some (.node (some (.node none (some (.leaf 97 true 13)))) none)))) (some (.node (some (.node (some (.node none (some (.leaf 21 false 0)))) none)) none)))) (some (.node (some (.node (some (.node (some (.node none (some (.leaf 24 false 0)))) none)) none)) none)))) none)) none)) none)))) (some (.node (some (.node (some (.node (some (.node (some (.node (some (.node (some (.node (some (.node none (some (.node none (some (.leaf 354 false 0)))))) (some (.node (some (.node none (some (.leaf 109 false 0)))) none)))) (some (.node (some (.node (some (.node none (some (.leaf 97 false 0)))) none)) none)))) (some (.node (some (.node (some (.node (some (.node none (some (.leaf 101 false 0)))) none)) none)) none)))) none)) none)) none)) none)))) none)
+
+theorem region_0038_check :
+    AssignmentTree.check 18 5 classes 11 (mustParsePath "RRRRRURRRRRU") region_0038 = true := by
+  unfold region_0038
+  rfl
+
+def region_0039 : AssignmentTree :=
+  (.node (some (.node (some (.node (some (.node (some (.node (some (.node (some (.node (some (.node (some (.node (some (.node none (some (.node none (some (.node none (some (.leaf 700 false 0)))))))) (some (.node (some (.node none (some (.node none (some (.leaf 589 false 0)))))) (some (.node (some (.node none (some (.leaf 616 false 0)))) none)))))) (some (.node (some (.node (some (.node none (some (.node none (some (.leaf 489 false 0)))))) (some (.node (some (.node none (some (.leaf 220 false 0)))) none)))) (some (.node (some (.node (some (.node none (some (.leaf 510 false 0)))) none)) none)))))) (some (.node (some (.node (some (.node (some (.node none (some (.node none (some (.leaf 413 false 0)))))) (some (.node (some (.node none (some (.leaf 167 false 0)))) none)))) (some (.node (some (.node (some (.node none (some (.leaf 175 false 0)))) none)) none)))) (some (.node (some (.node (some (.node (some (.node none (some (.leaf 427 false 0)))) none)) none)) none)))))) (some (.node (some (.node (some (.node (some (.node (some (.node none (some (.node none (some (.leaf 322 true 3)))))) (some (.node (some (.node none (some (.leaf 105 true 8)))) none)))) (some (.node (some (.node (some (.node none (some (.leaf 25 false 0)))) none)) none)))) (some (.node (some (.node (some (.node (some (.node none (some (.leaf 105 false 0)))) none)) none)) none)))) none)))) (some (.node (some (.node (some (.node (some (.node (some (.node (some (.node none (some (.node none (some (.leaf 315 false 0)))))) (some (.node (some (.node none (some (.leaf 100 true 4)))) none)))) (some (.node (some (.node (some (.node none (some (.leaf 23 true 9)))) none)) none)))) (some (.node (some (.node (some (.node (some (.node none (some (.leaf 12 true 9)))) none)) none)) none)))) none)) none)))) (some (.node (some (.node (some (.node (some (.node (some (.node (some (.node (some (.node none (some (.node none (some (.leaf 333 false 0)))))) (some (.node (some (.node none (some (.leaf 96 true 4)))) none)))) (some (.node (some (.node (some (.node none (some (.leaf 20 true 14)))) none)) none)))) (some (.node (some (.node (some (.node (some (.node none (some (.leaf 3 true 14)))) none)) none)) none)))) none)) none)) none)))) (some (.node (some (.node (some (.node (some (.node (some (.node (some (.node (some (.node (some (.node none (some (.node none (some (.leaf 357 false 0)))))) (some (.node (some (.node none (some (.leaf 111 false 0)))) none)))) (some (.node (some (.node (some (.node none (some (.leaf 18 true 14)))) none)) none)))) (some (.node (some (.node (some (.node (some (.node none (some (.leaf 10 true 14)))) none)) none)) none)))) none)) none)) none)) none)))) none)) none)
+
+theorem region_0039_check :
+    AssignmentTree.check 18 5 classes 12 (mustParsePath "RRRRRURRRRU") region_0039 = true := by
+  unfold region_0039
+  rfl
+
+def regionsPart009 : List (Path × Nat × AssignmentTree) := [
+  (mustParsePath "RRRRRURRRRRRRU", 9, region_0036),
+  (mustParsePath "RRRRRURRRRRRU", 10, region_0037),
+  (mustParsePath "RRRRRURRRRRU", 11, region_0038),
+  (mustParsePath "RRRRRURRRRU", 12, region_0039)
+]
+
+theorem regionsPart009_valid : ∀ region ∈ regionsPart009,
+    region.1.length + region.2.1 = 23 ∧
+      region.2.2.check 18 5 classes region.2.1 region.1 = true := by
+  intro region h
+  simp only [regionsPart009, List.mem_cons, List.mem_nil_iff, or_false] at h
+  rcases h with rfl | rfl | rfl | rfl
+  · exact ⟨by decide, region_0036_check⟩
+  · exact ⟨by decide, region_0037_check⟩
+  · exact ⟨by decide, region_0038_check⟩
+  · exact ⟨by decide, region_0039_check⟩
+
+end LatticePathOrders.GeneratedMinimality_18_5

@@ -1,0 +1,7 @@
+{
+  "claim_status": "finite exact counterexample search",
+  "max_total_length": 25,
+  "endpoint_count": 99,
+  "path_count": 934635,
+  "counterexample_count": 0
+}

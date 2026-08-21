@@ -1,0 +1,77 @@
+import LatticePathOrders.Basic
+
+namespace LatticePathOrders.GeneratedMinimality_13_11
+
+def partitionFrontierAtom18 : List Path := [
+  mustParsePath "RRRRURURRRURURR",
+  mustParsePath "RRRRURURRRURURU",
+  mustParsePath "RRRRURURRRURUUR",
+  mustParsePath "RRRRURURRRURUUU",
+  mustParsePath "RRRRURURRRUURRR",
+  mustParsePath "RRRRURURRRUURRU",
+  mustParsePath "RRRRURURRRUURUR",
+  mustParsePath "RRRRURURRRUURUU",
+  mustParsePath "RRRRURURRRUUURR",
+  mustParsePath "RRRRURURRRUUURU",
+  mustParsePath "RRRRURURRRUUUU",
+  mustParsePath "RRRRURURRURRRR",
+  mustParsePath "RRRRURURRURRRUR",
+  mustParsePath "RRRRURURRURRRUU",
+  mustParsePath "RRRRURURRURRURR",
+  mustParsePath "RRRRURURRURRURU",
+  mustParsePath "RRRRURURRURRUUR",
+  mustParsePath "RRRRURURRURRUUU",
+  mustParsePath "RRRRURURRURURRR",
+  mustParsePath "RRRRURURRURURRU",
+  mustParsePath "RRRRURURRURURUR",
+  mustParsePath "RRRRURURRURURUU",
+  mustParsePath "RRRRURURRURUURR",
+  mustParsePath "RRRRURURRURUURU",
+  mustParsePath "RRRRURURRURUUU",
+  mustParsePath "RRRRURURRUURRRR",
+  mustParsePath "RRRRURURRUURRRU",
+  mustParsePath "RRRRURURRUURRUR",
+  mustParsePath "RRRRURURRUURRUU",
+  mustParsePath "RRRRURURRUURURR",
+  mustParsePath "RRRRURURRUURURU",
+  mustParsePath "RRRRURURRUURUU",
+  mustParsePath "RRRRURURRUUURRR",
+  mustParsePath "RRRRURURRUUURRU",
+  mustParsePath "RRRRURURRUUURU",
+  mustParsePath "RRRRURURURRRRR",
+  mustParsePath "RRRRURURURRRRUR",
+  mustParsePath "RRRRURURURRRRUU",
+  mustParsePath "RRRRURURURRRURR",
+  mustParsePath "RRRRURURURRRURU",
+  mustParsePath "RRRRURURURRRUUR",
+  mustParsePath "RRRRURURURRRUUU",
+  mustParsePath "RRRRURURURRURRR",
+  mustParsePath "RRRRURURURRURRU",
+  mustParsePath "RRRRURURURRURUR",
+  mustParsePath "RRRRURURURRURUU",
+  mustParsePath "RRRRURURURRUURR",
+  mustParsePath "RRRRURURURRUURU",
+  mustParsePath "RRRRURURURRUUU",
+  mustParsePath "RRRRURURURURRRR",
+  mustParsePath "RRRRURURURURRRU",
+  mustParsePath "RRRRURURURURRUR",
+  mustParsePath "RRRRURURURURRUU",
+  mustParsePath "RRRRURURURURURR",
+  mustParsePath "RRRRURURURURURU",
+  mustParsePath "RRRRURURURURUU",
+  mustParsePath "RRRRURURURUURRR",
+  mustParsePath "RRRRURURURUURRU",
+  mustParsePath "RRRRURURURUURU",
+  mustParsePath "RRRRURURUURRRRR",
+  mustParsePath "RRRRURURUURRRRU",
+  mustParsePath "RRRRURURUURRRUR",
+  mustParsePath "RRRRURURUURRRUU",
+  mustParsePath "RRRRURURUURRURR"
+]
+
+@[simp] theorem partitionFrontierAtom18_length :
+    partitionFrontierAtom18.length = 64 := by
+  decide
+
+end LatticePathOrders.GeneratedMinimality_13_11
+

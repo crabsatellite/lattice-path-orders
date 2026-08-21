@@ -1,0 +1,92 @@
+import LatticePathOrders.MinimalityClassTable
+
+set_option maxRecDepth 1000000
+set_option maxHeartbeats 0
+
+namespace LatticePathOrders.GeneratedMinimality_7_6
+
+/-- Bounded class chunk 0; derived from receipt SHA-256
+`fac6462f9596f8e8d168b543e36f6604b20194b6633ecb14857c2d59918f11d4`.  Leaf checks recompute every value. -/
+def classChunk000 : ClassTable := .leaf #[
+  { anchor := mustParsePath "RRURURURURURU", numerator := 10076746685, qMin := 33461 },
+  { anchor := mustParsePath "RRURURRURUURU", numerator := 12748893917, qMin := 37577 },
+  { anchor := mustParsePath "RRURRURUURURU", numerator := 12765158285, qMin := 37591 },
+  { anchor := mustParsePath "RRRURURUURURU", numerator := 13244096885, qMin := 38011 },
+  { anchor := mustParsePath "RRRURUURURURU", numerator := 13241335037, qMin := 37949 },
+  { anchor := mustParsePath "RRURRRURUUURU", numerator := 17421624077, qMin := 43517 },
+  { anchor := mustParsePath "RRRRURUURUURU", numerator := 17516787197, qMin := 43589 },
+  { anchor := mustParsePath "RRRRURUUURURU", numerator := 18174005717, qMin := 44389 },
+  { anchor := mustParsePath "RRRRRURUUUURU", numerator := 25099114325, qMin := 52153 },
+  { anchor := mustParsePath "RRRURUURRUURU", numerator := 16539760445, qMin := 40613 },
+  { anchor := mustParsePath "RRURURURURRUU", numerator := 12589513205, qMin := 35431 },
+  { anchor := mustParsePath "RRURURRUURRUU", numerator := 15731932325, qMin := 39605 },
+  { anchor := mustParsePath "RRURRUURRUURU", numerator := 15846529685, qMin := 39739 },
+  { anchor := mustParsePath "RRURURURRUURU", numerator := 12667727597, qMin := 35489 },
+  { anchor := mustParsePath "RRURURRUURURU", numerator := 12670428965, qMin := 35491 },
+  { anchor := mustParsePath "RRURRUURURRUU", numerator := 15843508637, qMin := 39679 },
+  { anchor := mustParsePath "RRURRUURURURU", numerator := 12683940125, qMin := 35501 },
+  { anchor := mustParsePath "RRURRURRUURUU", numerator := 15982774925, qMin := 39841 },
+  { anchor := mustParsePath "RRURRRURUURUU", numerator := 16688247485, qMin := 40709 },
+  { anchor := mustParsePath "RRRUURRUURRUU", numerator := 20375564045, qMin := 44695 },
+  { anchor := mustParsePath "RRRUURRURUURU", numerator := 16524331205, qMin := 40243 },
+  { anchor := mustParsePath "RRRUURRUURURU", numerator := 16425754565, qMin := 40121 },
+  { anchor := mustParsePath "RRRUURURRURUU", numerator := 16505825621, qMin := 40171 },
+  { anchor := mustParsePath "RRRUURURURRUU", numerator := 16407304277, qMin := 40049 },
+  { anchor := mustParsePath "RRRRUURRUUURU", numerator := 22515302597, qMin := 46913 },
+  { anchor := mustParsePath "RRRUURURRUURU", numerator := 16521246221, qMin := 40181 },
+  { anchor := mustParsePath "RRRUURURURURU", numerator := 13144851797, qMin := 35839 },
+  { anchor := mustParsePath "RRURURRRURUUU", numerator := 17273056325, qMin := 41083 },
+  { anchor := mustParsePath "RRRUURRRUURUU", numerator := 21405738245, qMin := 45733 },
+  { anchor := mustParsePath "RRURURRURRUUU", numerator := 16530502037, qMin := 40189 },
+  { anchor := mustParsePath "RRURRRUURURUU", numerator := 16549021445, qMin := 40211 },
+  { anchor := mustParsePath "RRURRRUURRUUU", numerator := 21433838405, qMin := 45761 },
+  { anchor := mustParsePath "RRURURRRUURUU", numerator := 16545934157, qMin := 40199 },
+  { anchor := mustParsePath "RRURRURRUUURU", numerator := 16669650317, qMin := 40349 },
+  { anchor := mustParsePath "RRURRRUURUURU", numerator := 16672749125, qMin := 40351 },
+  { anchor := mustParsePath "RRURRRURURUUU", numerator := 17298299525, qMin := 41101 },
+  { anchor := mustParsePath "RRRRUURURURUU", numerator := 17238377021, qMin := 40991 },
+  { anchor := mustParsePath "RRRRUURURUURU", numerator := 17367813365, qMin := 41143 },
+  { anchor := mustParsePath "RRRRUURUURRUU", numerator := 21564041405, qMin := 45835 },
+  { anchor := mustParsePath "RRRRUURUURURU", numerator := 17389960637, qMin := 41159 },
+  { anchor := mustParsePath "RRURRRURRUUUU", numerator := 22713805517, qMin := 47039 },
+  { anchor := mustParsePath "RRURRRRUURUUU", numerator := 22717422725, qMin := 47041 },
+  { anchor := mustParsePath "RRURRRRURUUUU", numerator := 23867469077, qMin := 48217 },
+  { anchor := mustParsePath "RRRRRUURUURUU", numerator := 22851461885, qMin := 47173 },
+  { anchor := mustParsePath "RRRRRUURUUURU", numerator := 23886011597, qMin := 48227 },
+  { anchor := mustParsePath "RRURRUURRRUUU", numerator := 21402227021, qMin := 45361 },
+  { anchor := mustParsePath "RRRUURURRRUUU", numerator := 22314085637, qMin := 46309 },
+  { anchor := mustParsePath "RRRUURRRUUURU", numerator := 22342775621, qMin := 46337 },
+  { anchor := mustParsePath "RRURURURRRUUU", numerator := 17128265621, qMin := 40571 },
+  { anchor := mustParsePath "RRURRRUUURRUU", numerator := 21430324877, qMin := 45379 },
+  { anchor := mustParsePath "RRURURRRUUURU", numerator := 17254136021, qMin := 40711 },
+  { anchor := mustParsePath "RRURRRUUURURU", numerator := 17279365397, qMin := 40739 },
+  { anchor := mustParsePath "RRRURRRUUURUU", numerator := 22572959045, qMin := 46561 },
+  { anchor := mustParsePath "RRRRUUURRRUUU", numerator := 30327177605, qMin := 53921 },
+  { anchor := mustParsePath "RRRRUUURRURUU", numerator := 22457719877, qMin := 46399 },
+  { anchor := mustParsePath "RRRRUUURRUURU", numerator := 22486502021, qMin := 46427 },
+  { anchor := mustParsePath "RRRRUUURURRUU", numerator := 22482903245, qMin := 46415 },
+  { anchor := mustParsePath "RRRURURRRUUUU", numerator := 23476061957, qMin := 47429 },
+  { anchor := mustParsePath "RRRRRUUURRUUU", numerator := 30595257221, qMin := 54145 },
+  { anchor := mustParsePath "RRRRUUURURURU", numerator := 18019035221, qMin := 41551 },
+  { anchor := mustParsePath "RRURRURRRUUUU", numerator := 22684878221, qMin := 46621 },
+  { anchor := mustParsePath "RRURRRRUUURUU", numerator := 22713805517, qMin := 46649 },
+  { anchor := mustParsePath "RRRURRRUUUURU", numerator := 23711996165, qMin := 47663 },
+  { anchor := mustParsePath "RRRRRUUURURUU", numerator := 23652902021, qMin := 47597 },
+  { anchor := mustParsePath "RRRRRUUURUURU", numerator := 23860054085, qMin := 47803 },
+  { anchor := mustParsePath "RRRRRRUUURUUU", numerator := 32504844677, qMin := 55793 },
+  { anchor := mustParsePath "RRRUURRRRUUUU", numerator := 30561682757, qMin := 54049 },
+  { anchor := mustParsePath "RRURURRRRUUUU", numerator := 23630760725, qMin := 47525 },
+  { anchor := mustParsePath "RRURRRRUUUURU", numerator := 23837816021, qMin := 47731 },
+  { anchor := mustParsePath "RRRRRUUUURRUU", numerator := 30826580621, qMin := 54271 },
+  { anchor := mustParsePath "RRRRRUUUURURU", numerator := 24886640021, qMin := 48761 },
+  { anchor := mustParsePath "RRRURRRRUUUUU", numerator := 32470238021, qMin := 55697 },
+  { anchor := mustParsePath "RRRRRRUUUURUU", numerator := 32712871685, qMin := 55903 },
+  { anchor := mustParsePath "RRURRRRRUUUUU", numerator := 32708531021, qMin := 55891 },
+  { anchor := mustParsePath "RRRRRRUUUUURU", numerator := 34400975621, qMin := 57317 },
+  { anchor := mustParsePath "RRRRRRRUUUUUU", numerator := 47156294021, qMin := 67105 }
+]
+
+theorem classChunk000_valid : ClassTableValid classChunk000 := by
+  decide
+
+end LatticePathOrders.GeneratedMinimality_7_6

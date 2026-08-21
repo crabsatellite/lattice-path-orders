@@ -1,0 +1,943 @@
+\documentclass[11pt]{amsart}
+
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage{amssymb}
+\usepackage{microtype}
+\usepackage{booktabs}
+\usepackage{xcolor}
+\usepackage{url}
+\usepackage{hyperref}
+
+\makeatletter
+\g@addto@macro\UrlBreaks{\do\_\do\.}
+\makeatother
+
+\setlength{\emergencystretch}{3em}
+\hypersetup{
+  colorlinks=true,
+  linkcolor=blue!55!black,
+  citecolor=green!40!black,
+  urlcolor=blue!55!black,
+  pdftitle={Lagrange Collisions and Cover Relations for Rational Dyck Paths},
+  pdfauthor={Alex Chengyu Li}
+}
+
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{corollary}[theorem]{Corollary}
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{remark}[theorem]{Remark}
+
+\newcommand{\RR}{\mathrm{R}}
+\newcommand{\UU}{\mathrm{U}}
+\newcommand{\cD}{\mathcal D}
+\newcommand{\Mat}{\operatorname{Mat}}
+\newcommand{\tr}{\operatorname{tr}}
+\newcommand{\Fib}{\operatorname{Fib}}
+\newcommand{\Ftwo}{\mathbb F_2}
+
+\title[Lagrange collisions and cover relations]
+{Lagrange Collisions and Cover Relations for Rational Dyck Paths}
+
+\author{Alex Chengyu Li}
+\address{Independent Researcher, Tokyo, Japan; ORCID 0009-0008-4516-8946}
+\email{cl7076@nyu.edu}
+\date{August 2026}
+\dedicatory{\normalfont\small\textbf{Formalization status.}
+An accompanying Lean~4 development kernel-checks every numbered result and
+displayed formula identified in the manuscript map, together with all exact
+certificates described in Section~\ref{sec:formal}.  The publication root is
+premise-free and derives the snake-graph matching formula and the periodic
+Lagrange formula from Mathlib foundations.}
+
+\subjclass[2020]{Primary 05A15, 06A07; Secondary 11A55, 05C70}
+\keywords{lattice paths, continuants, Lagrange spectrum, band graphs,
+cover relations, exact certificates}
+
+\begin{document}
+
+\begin{abstract}
+Schiffler associated matching and Lagrange orders to rational Dyck paths and
+posed two problems about their equality and cover relations.  We first classify
+the band-graph isomorphism classes at a fixed coprime endpoint: every class is
+an orbit of an explicit reversal involution and therefore has size at most two.
+We then give two paths in $\cD(17,9)$ with the same exact Lagrange value but in
+different band-graph orbits, answering the equality question negatively.
+Two independent exact enumerations through total length $25$ show that the
+length-$26$ example is computationally minimal.
+
+For the cover problem, we attach exact matrix intervals to rational-Dyck
+prefixes.  A best-first traversal emits complete equality levels in increasing
+order for both scores; equivalently, a pair is a cover precisely when a finite
+prefix antichain certifies all path cylinders outside its open score interval.
+We supplement this global characterization with structural matching results:
+the parity of every matching score is determined by the endpoint, every score
+gap of two is a cover, a local interchange has an exact four-case continuant
+formula, and the first $n$ matching levels in $\cD(n,n-1)$ are explicit
+singletons.  The last result yields covers at Hamming distance $2n-6$, ruling
+out any uniformly bounded local-move catalogue.  All finite certificates use
+integer arithmetic or reduced rational squares.
+\end{abstract}
+
+\maketitle
+
+\section{The problems and main results}
+
+Let $a>b>0$ be coprime.  The set $\cD(a,b)$ consists of the words with $a$
+letters $\RR$ and $b$ letters $\UU$ for which every prefix $v$ satisfies
+\[
+  a\,\#_{\UU}(v)\leq b\,\#_{\RR}(v).
+\]
+Schiffler~\cite{Schiffler} associates two strict partial orders to these
+paths.  The matching score is the numerator of a finite continued fraction,
+and the Lagrange score is the Lagrange number of an associated periodic
+continued fraction.  The underlying snake and band graphs belong to the graph
+calculus developed by \c{C}anak\c{c}\i{} and Schiffler
+\cite{CanakciSchifflerBand}.  Problem~6.3 of \cite{Schiffler} asks whether
+equality of Lagrange values for two paths in the same $\cD(a,b)$ implies
+isomorphism of their band graphs.  Problem 6.5 asks for a path description of
+the cover relations in either order.  Apruzzese and Cong
+\cite{ApruzzeseCong} prove the common unique maximum and the supremum of all
+Lagrange values; they reiterate that comparison criteria alone do not exclude
+an intermediate score level.
+
+The first structural point is that band-graph isomorphism itself has a simple
+path description.  Reverse the cyclic step word of $\omega$ and rotate it to
+the unique member of $\cD(a,b)$ in that rotation class; call the result
+$\tau(\omega)$.  The existence and uniqueness are the coprime cycle lemma,
+recalled in Section~\ref{sec:band-classes}.
+
+\begin{theorem}[Band-graph classes]\label{thm:band-classes}
+For $\omega,\omega'\in\cD(a,b)$,
+\[
+ \overline G(\omega)\cong\overline G(\omega')
+ \quad\Longleftrightarrow\quad
+ \omega'=\omega\ \hbox{or}\ \omega'=\tau(\omega).
+\]
+In particular, every band-graph isomorphism class has size at most two.
+\end{theorem}
+
+This makes the equality question concrete: one must decide whether a Lagrange
+level can meet two different $\tau$-orbits.  Our first counterexample does so.
+
+\begin{theorem}[Counterexample to Problem 6.3]\label{thm:counterexample}
+There are paths $\omega,\omega'\in\cD(17,9)$ such that
+\[
+ L(\omega)=L(\omega')
+ \quad\hbox{but}\quad
+ \overline G(\omega)\not\cong\overline G(\omega').
+\]
+They can be chosen with step words
+\begin{align*}
+ \omega  &={\tt RRRRRRURRURRUURURRURRRUURU},\\
+ \omega' &={\tt RRRRRRURUURURRURRRURRURRUU}.
+\end{align*}
+\end{theorem}
+
+The equality and nonisomorphism are finite exact statements and do not depend
+on floating-point approximations.
+
+Our answer to the cover problem is constructive and global.  Explicit lower
+and upper score bounds on every path-prefix cylinder yield both a score-ordered
+generator and a locally checkable prefix-antichain certificate for any
+proposed cover.  No bounded catalogue of local swaps is required.
+
+\begin{theorem}[Constructive cover characterization]\label{thm:global-cover}
+For every coprime $a>b>0$, there is an exact best-first traversal of the
+rational-Dyck prefix tree that emits the complete matching-score levels, and
+also the complete Lagrange-score levels, in strictly increasing batches.
+For either order, the cover relation is the union of the complete bipartite
+relations between consecutive emitted batches.
+
+Equivalently, paths $x<y$ form a cover if and only if there is a finite prefix
+antichain partitioning $\cD(a,b)$ such that the score interval of every
+antichain cylinder is certified to lie at or below the score of $x$, or at or
+above the score of $y$.
+\end{theorem}
+
+The bounds and the certificate criterion are given explicitly in
+Section~\ref{sec:covers}.  The matching order also admits useful uniform
+structure.
+
+\begin{theorem}[Endpoint parity]\label{thm:parity}
+For every $\omega\in\cD(a,b)$,
+\[
+ M(\omega)\equiv0\pmod2
+ \quad\Longleftrightarrow\quad
+ 3\mid(a-b).
+\]
+Consequently all matching scores at a fixed endpoint have the same parity,
+and any two realized scores differing by two are consecutive levels.
+\end{theorem}
+
+Finally, the next theorem gives a closed initial segment and shows why the
+global form of Theorem~\ref{thm:global-cover} is necessary.  For a path
+$\omega$, write $A_E(\omega)$ for its word in the adjacency blocks $D,E$ of
+Section~\ref{sec:matrices}.
+
+\begin{theorem}[Initial matching levels and unbounded nonlocality]
+\label{thm:nonlocal}
+For every $n\geq4$, the paths
+\[
+ X_n=\RR\RR\RR(\UU\RR)^{n-3}\UU\UU,
+ \qquad
+ Y_n=\RR\RR(\UU\RR)^{n-4}\RR\UU\UU\RR\UU
+\]
+form a matching cover in $\cD(n,n-1)$ and have Hamming distance $2n-6$.
+More precisely, the first $n$ distinct matching levels are singletons.  The
+minimum is the path with block word $ED^{2n-3}$; the next $n-2$ paths have
+block words
+\[
+ ED^{2r}ED^{2n-5-2r}E,
+ \qquad 0\leq r\leq n-3,
+\]
+listed in decreasing order of $r$; and $Y_n$ is the unique path at the next
+level.  In this list $X_n$ is the level immediately below $Y_n$.
+\end{theorem}
+
+Theorem~\ref{thm:band-classes} and the parity and initial-level theorems are
+uniform structural results.  Their proofs use, respectively, the coprime cycle
+lemma, a two-by-two calculation over $\Ftwo$, and an elementary
+Pell-continuant extremal lemma.
+
+\section{Background and exact matrix model}\label{sec:matrices}
+
+For a path $\omega$, form a finite coefficient word $A(\omega)$ from adjacent
+steps: an equal pair contributes the two coefficients $1,1$, while an unequal
+pair contributes the coefficient $2$.  Schiffler's matching score $M(\omega)$
+is the numerator of the continued fraction with coefficient word
+$A(\omega)$.  Closing the step word cyclically adds one unequal edge, and the
+corresponding periodic continued fraction has Lagrange number $L(\omega)$.
+The two strict orders considered here are the pullbacks of the usual order on
+these scores:
+\[
+ \omega<_M\eta\iff M(\omega)<M(\eta),\qquad
+ \omega<_L\eta\iff L(\omega)<L(\eta).
+\]
+Paths with equal scores are therefore incomparable.  A cover is a pair of
+paths in two consecutive distinct realized score levels.
+
+Put
+\[
+ T(c)=\begin{pmatrix}c&1\\1&0\end{pmatrix},\qquad
+ D=T(2)=\begin{pmatrix}2&1\\1&0\end{pmatrix},\qquad
+ E=T(1)^2=\begin{pmatrix}2&1\\1&1\end{pmatrix}.
+\]
+For adjacent steps of a path, assign the block $E$ when the steps agree and
+$D$ when they differ.  If the product of the $a+b-1$ adjacency blocks is
+$P(\omega)$, then
+\[
+  M(\omega)=P(\omega)_{11}.
+\]
+This is exactly Schiffler's rule replacing an equal pair by the digits $1,1$
+and an unequal pair by the digit $2$.
+
+For completeness, this identity can also be obtained directly from the graph.
+Expose the terminal edge of a square snake and keep two states: $p$ is the
+number of perfect matchings, and $q$ is the number of matchings that leave
+exactly the two terminal vertices unmatched.  Attaching one square gives
+
+\begin{align*}
+ (p,q)&\longmapsto(p+q,p)
+   &&\text{for a straight continuation},\\
+ (p,q)&\longmapsto(p+q,q)
+   &&\text{at a turn}.
+\end{align*}
+
+Indeed, the two new vertices are matched either to each other or to the two
+vertices of the shared edge.  Starting from $(2,1)$ for one square, the two
+half-tile attachments associated with an adjacent pair of path steps act by
+$E$ when the steps agree and by $D$ when they differ.  Thus the first state is
+$P(\omega)_{11}$ and counts the actual edge subsets that meet every graph
+vertex exactly once.
+
+Close the step word cyclically.  Every path in $\cD(a,b)$ begins with $\RR$
+and ends with $\UU$, so the closing edge is unequal.  Thus the cyclic matrix is
+\[
+  F(\omega)=D P(\omega).
+\]
+The number of unequal edges in the closed binary word is even.  Hence
+$\det F(\omega)=1$.  For every cyclic digit cut, write the corresponding
+product as
+\[
+  F_i=\begin{pmatrix}p_i&r_i\\q_i&s_i\end{pmatrix}.
+\]
+All these products have the same trace.  The two fixed points of the associated
+linear fractional transformation differ by
+\[
+  \frac{\sqrt{(p_i-s_i)^2+4r_iq_i}}{q_i}
+  =\frac{\sqrt{\tr(F)^2-4}}{q_i}.
+\]
+To relate this calculation to the standard Lagrange number, let $\alpha_i$ be
+the positive purely periodic continued fraction at the $i$th cut.  Reversing
+the period transposes its matrix product.  If $\alpha_i'$ is the negative
+conjugate root, then $-1/\alpha_i'$ is the positive fixed point of the reversed
+period.  Hence the backward tail is $-\alpha_i'$, and the usual forward-plus-
+backward approximation coefficient is precisely
+$\alpha_i-\alpha_i'$.  Taking the maximum over the finitely many cyclic cuts
+therefore gives
+\begin{equation}\label{eq:L-square}
+  L(\omega)^2=\frac{\tr(F(\omega))^2-4}{q_{\min}(\omega)^2},
+  \qquad q_{\min}(\omega)=\min_i q_i.
+\end{equation}
+Equation~\eqref{eq:L-square} gives an exact reduced rational comparison for
+the Lagrange order, since all Lagrange values here are positive.
+
+\section{Band-graph classes}\label{sec:band-classes}
+
+Close the step word of $\omega$ cyclically.  Encode an equal cyclic edge by
+the pair $1,1$ and an unequal edge by $2$.  Since every path begins with $\RR$
+and ends with $\UU$, the closing edge contributes a leading $2$, and the
+resulting cyclic coefficient word is exactly
+\[
+ C(\omega)=(2,A(\omega)).
+\]
+We regard $C(\omega)$ with its intrinsic parsing into the blocks $(1,1)$ and
+$(2)$.  Equivalently, this parsing is recovered from the flattened digit word:
+every cyclic run of $1$'s has even length, and every $2$ is a singleton block.
+
+\begin{lemma}[Recovery from the cyclic code]\label{lem:code-recovery}
+The cyclic equality/difference word of the steps, equivalently the cyclic
+coefficient word $C(\omega)$, determines the cyclic step word of $\omega$ up
+to global complementation.  If two paths in the same $\cD(a,b)$ have either
+of these codes related by a rotation or reversal, then their cyclic step words
+are related by a rotation or reversal, without complementation.
+\end{lemma}
+
+\begin{proof}
+Pair the $1$'s in each cyclic run of $C(\omega)$ and replace every pair by an
+equal edge; replace each $2$ by an unequal edge.  This recovers the cyclic
+equality/difference word of the steps.  The parsing commutes with cyclic
+rotation and reversal, because the blocks $(1,1)$ and $(2)$ are palindromic.
+After one step is chosen, all remaining steps are forced.  The other initial
+choice complements every step.  Global complementation exchanges the numbers
+of $\RR$'s and $\UU$'s, and hence cannot take one word with $a$ copies of
+$\RR$ and $b$ copies of $\UU$ to another because $a\ne b$.
+\end{proof}
+
+We next record the coprime cycle lemma in the form needed here.  Give an
+$\RR$-step weight $b$ and a $\UU$-step weight $-a$.
+
+\begin{lemma}[Unique admissible rotation]\label{lem:unique-rotation}
+Every cyclic word with $a$ copies of $\RR$ and $b$ copies of $\UU$ has a
+unique rotation in $\cD(a,b)$.
+\end{lemma}
+
+\begin{proof}
+The total weight is zero.  No two proper cyclic prefix sums are equal: the
+intervening proper segment would have
+$b\,\#_{\RR}=a\,\#_{\UU}$, and coprimality would force it to contain all
+$a$ right steps and all $b$ up steps.  Thus the cyclic prefix sums are
+distinct.  Rotating immediately after their unique minimum makes every
+proper prefix sum positive, while any other rotation has a negative prefix
+ending at that minimum.  This is precisely the defining prefix inequality.
+\end{proof}
+
+Let $\tau(\omega)$ be the unique admissible rotation of the reversed step
+word.  Lemma~\ref{lem:unique-rotation} shows at once that $\tau$ is an
+involution.
+
+\begin{lemma}[Intrinsic tile cycle]\label{lem:tile-cycle}
+The abstract graph $\overline G(\omega)$ determines the cyclic
+equality/difference word of the steps up to rotation and reversal.  Conversely,
+a rotation or reversal of that word induces an isomorphism of the band graphs.
+\end{lemma}
+
+\begin{proof}
+Schiffler's construction places one square at every step midpoint and every
+interior path vertex, adds the closing square, and glues the two terminal
+edges; see \cite{CanakciSchifflerBand,Schiffler}.  Before the final gluing, the
+square centers form a monotone width-one ribbon.  It contains no $2\times2$
+block, so every chordless four-cycle in its one-skeleton is the boundary of a
+single square.  After gluing, a new four-cycle using the glued edge would give
+a three-edge path between its endpoints in the open ribbon.  The only such
+paths are the other three sides of the two squares incident with that edge;
+the alternative route traverses the remaining ribbon, which has at least six
+tiles.  Thus the chordless four-cycles of $\overline G(\omega)$ are precisely
+its $2(a+b)$ tiles, and their shared-edge intersection graph is a cycle.
+
+The tile cycle is bipartite.  One bipartition class consists of the step
+midpoint squares; on each of them the two shared edges are opposite.  The other
+class consists of the path-vertex squares.  On such a square the shared edges
+are opposite when the two cyclically adjacent steps agree and adjacent when
+they differ.  Since the closed step word contains both letters, the latter
+class contains an adjacent-edge square and is therefore distinguished from the
+midpoint class by the abstract graph.  Reading it around the tile cycle
+recovers the cyclic equality/difference word up to the dihedral symmetries of
+that cycle.  Reversing this construction proves the converse.
+\end{proof}
+
+\begin{proof}[Proof of Theorem~\ref{thm:band-classes}]
+ Lemma~\ref{lem:tile-cycle} says that the band graphs are isomorphic if and only
+ if the cyclic equality/difference codes are related dihedrally.  By
+ Lemma~\ref{lem:code-recovery}, their step words are then related by rotation
+or reversal.  Lemma~\ref{lem:unique-rotation} leaves only $\omega$ itself in
+the rotation class and $\tau(\omega)$ in the reversed class.  The converse
+follows directly from the construction.
+\end{proof}
+
+The classification also gives a closed count.  Put $N=a+b$ and define
+\[
+ R_{a,b}=\begin{cases}
+ \displaystyle\binom{(N-1)/2}{\lfloor a/2\rfloor},&N\text{ odd},\\[8pt]
+ \displaystyle\binom{(N-2)/2}{(a-1)/2},&N\text{ even}.
+ \end{cases}
+\]
+In the second case $a$ and $b$ are both odd.  The usual coprime cycle lemma
+gives $|\cD(a,b)|=\binom Na/N$.  Aperiodicity follows from coprimality.  When
+$N$ is odd, a reflection fixes one position and pairs the remaining positions;
+when $N$ is even, only the reflections fixing two positions can preserve the
+odd number $a$ of right steps.  Counting the fixed binary necklaces gives
+$R_{a,b}$.  Burnside's lemma for the involution $\tau$ now yields the following.
+
+\begin{corollary}[Number of band-graph classes]\label{cor:band-count}
+The number of band-graph isomorphism classes in $\cD(a,b)$ is
+\[
+ \frac12\left(\frac1N\binom Na+R_{a,b}\right).
+\]
+For $\cD(n,n-1)$ this becomes
+\[
+ \frac12\left(\operatorname{Cat}_{n-1}
+ +\binom{n-1}{\lfloor(n-1)/2\rfloor}\right).
+\]
+\end{corollary}
+
+\section{The counterexample}\label{sec:counterexample}
+
+Direct prefix checking places the two words of
+Theorem~\ref{thm:counterexample} in $\cD(17,9)$.  Their adjacency digit words
+both have $37$ digits and their cyclic words both have $38$ digits.  Exact
+matrix multiplication gives, for each path,
+\begin{align*}
+ \tr(F)&=20034079647,\\
+ \tr(F)^2-4&=401364347302339644605,\\
+ q_{\min}&=6262579207.
+\end{align*}
+Therefore
+\begin{equation}\label{eq:counter-value}
+ L(\omega)^2=L(\omega')^2
+ =\frac{401364347302339644605}{39219898323948748849}.
+\end{equation}
+
+It remains to separate the unlabelled band graphs.  We use an invariant that
+is recovered from the abstract graph.  In each of the two band graphs, the
+chordless $4$-cycles
+are exactly the $52$ square tiles.  Their edge-intersection graph is a
+$52$-cycle.  At each tile, record $1$ if the two edges shared with its two
+neighboring tiles are adjacent, and $0$ if they are opposite.  An abstract
+graph isomorphism must rotate or reverse this cyclic word.  The lexicographically
+least dihedral representatives for the two graphs are
+\begin{align*}
+ &{\tt 0000000000010100010100010001010100010100000100010101},\\
+ &{\tt 0000000000010001000101000101000001010001010100010101}.
+\end{align*}
+They differ, so the band graphs are not isomorphic.  This proves
+Theorem~\ref{thm:counterexample}.
+
+For reference, the corresponding least dihedral representatives of the cyclic
+coefficient words are
+\begin{align*}
+ &{\tt 11111111112211221121122211221111211222},\\
+ &{\tt 11111111112112112211221111221122211222}.
+\end{align*}
+
+\begin{proposition}[Computational minimality through length $25$]
+\label{prop:minimal}
+No coprime endpoint of total length at most $25$ contains a counterexample to
+Problem 6.3.  Thus the example above is computationally minimal in total
+length.
+\end{proposition}
+
+\begin{proof}[Exact finite verification]
+For every coprime pair $a>b>0$ with $a+b\leq25$, rational-Dyck words are
+generated recursively, retaining precisely the one-step extensions satisfying
+the prefix inequality.  This gives all $99$ endpoints and all $934{,}635$
+paths in the stated range.  For each path, equation~\eqref{eq:L-square} is
+evaluated with arbitrary-precision integer matrices.  Equality of two
+Lagrange squares is decided by exact cross multiplication, and the band class
+is represented by the least rotation among the cyclic turn word and its
+reversal.  Grouping by the exact Lagrange square produces $471{,}455$ score
+classes; every class is contained in one band-graph class.
+
+For each endpoint, the number generated is also checked against the coprime
+cycle-lemma count $\binom{a+b}{a}/(a+b)$.  Hence the recursion omits no path in
+the stated range.
+
+An independent C++ implementation reproduces every endpoint, path, and
+score-class count through length $25$ and again verifies that no score class
+meets two band classes.  Its unsigned $128$-bit arithmetic is exact on this
+range: the sum of the cyclic coefficients is at most $50$, so every continuant
+is at most $\Fib_{51}$ and every squared quantity is far below $2^{128}$.  A
+third exact implementation verifies the displayed length-$26$ pair and
+constructs its two abstract band graphs directly.  The agreement of the two
+exhaustive enumerations proves the proposition.
+\end{proof}
+
+\section{Structural matching covers}\label{sec:matching-structure}
+
+We first prove that the parity of the matching score does not depend on the
+path.  Work over $\Ftwo$ and put $F=T(1)$ and $S=T(2)$.  Direct multiplication
+gives
+\[
+ F^3=I,\qquad E=F^2=F^{-1},\qquad SFS=F^{-1}.
+\]
+Write a path by its nonempty runs as
+\[
+ \RR^{r_1}\UU^{u_1}\cdots\RR^{r_k}\UU^{u_k}.
+\]
+Its adjacency product modulo two is
+\[
+ E^{r_1-1}SE^{u_1-1}S\cdots
+ SE^{r_k-1}SE^{u_k-1}.
+\]
+Moving every occurrence of $S$ to the right by
+$SF^j=F^{-j}S$, and using $\sum r_i=a$ and $\sum u_i=b$, reduces this product
+to
+\begin{equation}\label{eq:parity-normal-form}
+ P(\omega)\equiv F^{b-a}S\pmod2.
+\end{equation}
+The upper-left entry of $F^jS$ is zero precisely when $j\equiv0\pmod3$.
+This proves Theorem~\ref{thm:parity}.
+
+\begin{corollary}[Unit-gap covers]\label{cor:unit-gap}
+If $x,y\in\cD(a,b)$ and $M(y)=M(x)+2$, then $y$ covers $x$ in the matching
+order.
+\end{corollary}
+
+\begin{proof}
+All realized matching scores in this endpoint class have the same parity by
+Theorem~\ref{thm:parity}.  No integer of that parity lies strictly between
+$M(x)$ and $M(y)$.
+\end{proof}
+
+The local interchange proposed after Problem 6.5 also has a closed score
+formula, although it does not have a uniform direction.  Suppose two valid
+paths differ by an interior interchange
+\[
+ \text{old}=\alpha\RR\UU\beta,
+ \qquad
+ \text{new}=\alpha\UU\RR\beta.
+\]
+Let $\ell$ and $r$ be the steps immediately before and after the interchanged
+pair.  Write the matrix products strictly before and after the three affected
+adjacency blocks as
+\[
+ P=\begin{pmatrix}p&r_0\\q&s\end{pmatrix},
+ \qquad
+ Q=\begin{pmatrix}u&v\\w&z\end{pmatrix}.
+\]
+
+\begin{proposition}[Exact local-interchange formula]
+\label{prop:local-swap}
+The matching-score difference is given by the following four cases.
+\begin{center}
+\renewcommand{\arraystretch}{1.15}
+\begin{tabular}{@{}c c c c@{}}
+\toprule
+$(\ell,r)$ & old blocks & new blocks & $M(\mathrm{old})-M(\mathrm{new})$\\
+\midrule
+$(\RR,\RR)$ & $EDD$ & $DDE$ & $2(r_0u-pw)$\\
+$(\RR,\UU)$ & $EDE$ & $DDD$ & $2(pw+r_0u+r_0w)>0$\\
+$(\UU,\RR)$ & $DDD$ & $EDE$ & $-2(pw+r_0u+r_0w)<0$\\
+$(\UU,\UU)$ & $DDE$ & $EDD$ & $2(pw-r_0u)$\\
+\bottomrule
+\end{tabular}
+\end{center}
+\end{proposition}
+
+\begin{proof}
+Only the first row of $P$ and the first column of $Q$ contribute to the
+upper-left entry of the complete product.  Substitution of
+\[
+ EDE-DDD=\begin{pmatrix}0&2\\2&2\end{pmatrix},
+ \qquad
+ EDD-DDE=\begin{pmatrix}0&-2\\2&0\end{pmatrix}
+\]
+gives the four displayed expressions.  All entries of $P$ and $Q$ that occur
+in the middle two cases are nonnegative, with $p,u>0$.  The sum
+$pw+r_0u+r_0w$ could vanish only if both exterior products were empty; the
+entire path would then contain two right and two up steps, contrary to
+$a>b$.  Hence the two displayed signs are strict.
+\end{proof}
+
+Thus the two mixed-neighbor cases force opposite directions, while the
+equal-side cases compare the prefix and suffix continuant ratios.  Combined
+with Corollary~\ref{cor:unit-gap}, the identities
+$|r_0u-pw|=1$ or $pw+r_0u+r_0w=1$ certify a matching cover without enumerating
+the remaining paths.  The formula alone is not a complete cover criterion:
+larger differences can still be consecutive among the realized scores.
+
+\section{Path-prefix bounds and all cover relations}\label{sec:covers}
+
+Fix a feasible prefix $\alpha$ of length $k\geq1$.  Let $P_\alpha$ be the
+product of its $k-1$ known adjacency blocks, and put $r=a+b-k$.  Every unknown
+block $B$ satisfies $D\leq B\leq E$ entrywise.  Since all entries are
+nonnegative, multiplication preserves these inequalities.
+
+\subsection{Matching bounds}
+
+Every completion $\omega$ of $\alpha$ satisfies
+\begin{equation}\label{eq:M-bounds}
+ \ell_M(\alpha):=(P_\alpha D^r)_{11}
+ \leq M(\omega)\leq
+ (P_\alpha E^r)_{11}=:u_M(\alpha).
+\end{equation}
+
+\subsection{Lagrange bounds}
+
+Trace monotonicity gives
+\[
+ T_-(\alpha):=\tr(DP_\alpha D^r)
+ \leq \tr(F(\omega))\leq
+ \tr(DP_\alpha E^r)=:T_+(\alpha).
+\]
+At the unshifted cut,
+\[
+ q_{\min}(\omega)\leq q_0(\omega)
+ \leq (DP_\alpha E^r)_{21}=:Q_+(\alpha).
+\]
+This yields the lower bound
+\begin{equation}\label{eq:L-lower}
+ \ell_L(\alpha)=
+ \frac{\max\{0,T_-(\alpha)^2-4\}}{Q_+(\alpha)^2}
+ \leq L(\omega)^2.
+\end{equation}
+
+Let $e(\alpha)$ be the number of equal adjacencies already present in the
+prefix.  The completed cyclic digit word has at least $a+b+e(\alpha)$ digits.
+At any cut, its lower-left entry is a positive-digit continuant of all digits
+except the first.  It is therefore at least the all-ones value
+$\Fib_{a+b+e(\alpha)}$, where $\Fib_0=0$, $\Fib_1=1$.  Hence
+\begin{equation}\label{eq:L-upper}
+ L(\omega)^2\leq
+ u_L(\alpha):=
+ \frac{\max\{0,T_+(\alpha)^2-4\}}
+ {\Fib_{a+b+e(\alpha)}^2}.
+\end{equation}
+At a leaf, all four bounds are replaced by the corresponding exact score.
+
+\subsection{Best-first level theorem}
+
+The feasible prefixes form a finite rooted tree.  Maintain a frontier
+antichain partitioning the not-yet-emitted leaves.  For the matching traversal,
+key a nonleaf node by $\ell_M$; for the Lagrange traversal, key it by
+$\ell_L$.  Key a leaf by its exact matching score or exact reduced Lagrange
+square.  Repeatedly expand a minimum-key nonleaf node or emit a minimum-key
+leaf, with nonleaf nodes taking precedence at an equal key.
+
+\begin{lemma}\label{lem:best-first}
+For either choice of score, leaves are emitted in nondecreasing exact score
+order, and every equality level is emitted as one complete batch.
+\end{lemma}
+
+\begin{proof}
+Suppose a leaf of score $s$ is about to be emitted while an unemitted leaf of
+score $t<s$ remains.  Exactly one current frontier prefix contains that leaf.
+Its key is a lower bound for all its completions, so its key is at most $t$ and
+it has priority over the leaf of key $s$, a contradiction.  The same argument
+with $t=s$, together with nonleaf-first tie handling, proves that the equality
+batch is complete before a larger leaf is emitted.
+\end{proof}
+
+Lemma~\ref{lem:best-first} proves the first statement of
+Theorem~\ref{thm:global-cover}.  Indeed, in a strict order pulled back from a
+scalar score, a path in level $A$ is covered by a path in level $B$ exactly
+when $A$ and $B$ are consecutive distinct scalar levels.
+
+\subsection{A direct cover certificate}
+
+For a prefix $\alpha$, let $I(\alpha)=[\ell(\alpha),u(\alpha)]$ be the
+applicable interval from \eqref{eq:M-bounds}, or from
+\eqref{eq:L-lower} and \eqref{eq:L-upper}.
+
+\begin{proposition}[Prefix-antichain criterion]\label{prop:antichain}
+Let $x,y\in\cD(a,b)$ have exact scores $s<t$ in either order.  Then $y$ covers
+$x$ if and only if there is a finite prefix antichain $\mathcal A$ whose
+cylinders partition $\cD(a,b)$ and such that every $\alpha\in\mathcal A$
+satisfies
+\[
+  u(\alpha)\leq s
+  \qquad\hbox{or}\qquad
+  \ell(\alpha)\geq t.
+\]
+\end{proposition}
+
+\begin{proof}
+If the antichain exists, the score of every path lies outside $(s,t)$, so no
+third level occurs between $x$ and $y$.  Conversely, refine every prefix whose
+interval meets $(s,t)$.  The tree is finite.  At a leaf the interval is the
+singleton exact score.  If $x<y$ is a cover, every leaf is at most $s$ or at
+least $t$, so the refinement terminates with the required antichain.
+\end{proof}
+
+This proves the second statement of Theorem~\ref{thm:global-cover}.  Notice
+that Proposition~\ref{prop:antichain} is a verifiable global interval-exclusion
+certificate.  It does not merely recompute the two endpoint scores.
+
+There is an equivalent deterministic formulation.  For exact scores $s<t$,
+define $\mathsf C_{s,t}(\alpha)$ recursively: it is true when
+$u(\alpha)\leq s$ or $\ell(\alpha)\geq t$; it is false at an otherwise
+undecided leaf; and at an otherwise undecided nonleaf prefix it is the
+conjunction of $\mathsf C_{s,t}$ over all feasible one-step extensions.
+Then
+\[
+  x\lessdot y
+  \quad\Longleftrightarrow\quad
+  \mathsf C_{s,t}(\RR)\ \hbox{is true}.
+\]
+Thus the criterion does not assume a cover oracle.  A successful recursion
+returns the terminal true prefixes as its antichain certificate; a failed
+recursion returns an intermediate path.
+
+\begin{remark}[Certificate size]\label{rem:scope}
+The full set of leaves is the worst-case certificate in the necessity proof.
+Thus Theorem~\ref{thm:global-cover} gives an exact global characterization but
+does not imply a uniformly short certificate or a finite catalogue of local
+swaps.  For scale,
+the matching cover $X_{13}\lessdot Y_{13}$ has a certificate with $122$
+terminal prefixes after $143$ expansions, while $\cD(13,12)$ has $208{,}012$
+paths.
+\end{remark}
+
+\section{An unbounded-distance matching-cover family}\label{sec:nonlocal}
+
+We give the proof of Theorem~\ref{thm:nonlocal}.  Let
+\[
+ P_{-1}=1,\quad P_0=0,\quad P_1=1,\qquad
+ P_{j+1}=2P_j+P_{j-1}.
+\]
+Then
+\[
+ D^j=\begin{pmatrix}P_{j+1}&P_j\\P_j&P_{j-1}\end{pmatrix}.
+\]
+Put $m=2n-2$ and $N=m-1$.  If an adjacency-block word has initial block $E$
+and exactly two further $E$ blocks at positions $1\leq i<j\leq m-1$, expansion
+of $E=D+\left(\begin{smallmatrix}0&0\\0&1\end{smallmatrix}\right)$ gives
+\begin{equation}\label{eq:three-E}
+ M(i,j)=P_{m+1}+f(i)+f(j)+P_iP_{j-i-2}P_{m-1-j},
+ \qquad f(k)=P_kP_{N-k}.
+\end{equation}
+The convention $P_{-1}=1$ covers adjacent positions.
+
+Extremal continuant rearrangements such as Ramharter's
+\cite{Ramharter} compare permutations of a fixed digit multiset.  Here the
+paired-$1$ constraint, fixed endpoints, and rational-Dyck prefix condition
+change the admissible family, so we use the following self-contained Pell
+comparison.
+
+The required Pell comparison is the following elementary lemma.
+
+\begin{lemma}\label{lem:pell-extrema}
+For odd $N\geq5$ and $1\leq k\leq N-1$,
+\[
+ f(k)\leq f(1),\qquad
+ f(k)\geq f(2),
+\]
+with equality in the second inequality only at $k=2,N-2$.  Away from those
+two positions, $f(k)\geq f(4)$.
+\end{lemma}
+
+\begin{proof}
+Write $N=2s+1$ and use $f(k)=f(N-k)$.  For
+$1\leq k\leq s-1$, the determinant identities
+\[
+ f(k+2)-f(k)=2(-1)^kP_{N-2k-2},\qquad
+ f(k)-f(k+1)=(-1)^{k+1}P_{N-2k-1}.
+\]
+have positive Pell numbers on their right-hand sides.  Hence the even
+subsequence increases from $f(2)$ and the odd subsequence decreases from
+$f(1)$ up to the midpoint.  The second identity interlaces them: an even term
+is smaller than the next odd term, while an odd term is larger than the next
+even term.  This proves the stated maximum and minimum, including the equality
+cases.  Every even term other than $f(2)$ is at least $f(4)$, and every
+odd $k$ with $3\leq k\leq s-1$ satisfies
+$f(k)>f(k+1)\geq f(4)$.  If $s$ is odd, symmetry gives
+$f(s)=f(s+1)\geq f(4)$; and $f(1)\geq f(4)$ follows from the maximum
+assertion.  Symmetry supplies the other half.
+\end{proof}
+
+We first verify the path conditions explicitly.  At the $j$th up-step in the
+alternating part of $X_n$, where $1\leq j\leq n-3$, the numbers of right and up
+steps are $j+2$ and $j$; hence the prefix margin is
+\[
+ (n-1)(j+2)-nj=2n-2-j>0.
+\]
+The two final up-steps have margins $n$ and $0$.  For $Y_n$, the $j$th up-step
+in the alternating part has counts $j+1,j$ and margin $n-1-j>0$ for
+$1\leq j\leq n-4$; its three remaining up-steps have margins $n+1,1,0$.
+Thus both displayed words lie in $\cD(n,n-1)$.
+
+Moreover every path in this set begins with $\RR\RR$: the alternative prefix
+$\RR\UU$ would require $n\leq n-1$.  Every such path ends with $\UU$, because
+deleting a final $\RR$ would leave all $n-1$ up-steps but only $n-1$ right-steps.
+There are $2n-2$ adjacency blocks, while a binary word beginning in $\RR$ and
+ending in $\UU$ has an odd number of unequal adjacencies.  Its block word
+therefore begins with $E$ and has an odd number of $E$ blocks.
+
+The block words of the two displayed paths are
+\[
+ A(X_n)=EED^{2n-5}E,\qquad
+ A(Y_n)=ED^{2n-8}EDED^2.
+\]
+Thus
+\[
+ M(X_n)=P_{m+1}+f(1),\qquad
+ M(Y_n)=P_{m+1}+f(2)+f(4).
+\]
+Their difference is positive because, with $h=m-5\geq1$,
+\[
+ M(Y_n)-M(X_n)=12P_h-P_{h+1}>0.
+\]
+Indeed $P_{h+1}=2P_h+P_{h-1}<3P_h$.
+
+Now classify an arbitrary path by its odd number of equal adjacency blocks.
+A path with one $E$ has score below
+$M(X_n)$.  For a three-$E$ word ending in $E$, equation
+\eqref{eq:three-E} and Lemma~\ref{lem:pell-extrema} give score at most
+$M(X_n)$.  For a three-$E$ word ending in $D$, the same lemma gives score at
+least $M(Y_n)$, except apparently for positions $\{2,m-3\}$.  In that case the
+interaction term in \eqref{eq:three-E} gives
+\[
+ M(2,m-3)-M(Y_n)=2P_{m-7}>0.
+\]
+Finally, in a word with at least five $E$ blocks, keep the initial $E$ and any
+two nonfinal $E$ blocks and replace every other $E$ by $D$.  The result is a
+three-$E$ word ending in $D$, and at least one nonfinal replacement is strict.
+Indeed, for nonempty products $P,Q$ on the two sides of a replaced block,
+\[
+ \bigl(P(E-D)Q\bigr)_{11}=P_{12}Q_{21}>0.
+\]
+Hence the original score is above $M(Y_n)$.  These cases
+exclude the whole open interval and prove the cover assertion.  Direct
+comparison of the step words gives Hamming distance $2n-6$.
+
+It remains to establish the stronger initial-level statement.  With one
+$E$-block, alternation forces the unique block word $ED^{m-1}$ and score
+$P_{m+1}$.  A three-$E$ word ending in $E$ has the form
+\[
+ A_r=ED^{2r}ED^{m-2r-3}E,
+ \qquad 0\leq r\leq n-3.
+\]
+Indeed, the endpoint counts force the movable $E$-position to be odd, and a
+direct prefix check shows that every displayed word decodes to a path in
+$\cD(n,n-1)$.  Equation~\eqref{eq:three-E} gives
+\[
+ M(A_r)=P_{m+1}+f(2r+1).
+\]
+The first determinant identity in the proof of
+Lemma~\ref{lem:pell-extrema} shows that
+\[
+ f(1)>f(3)>\cdots>f(m-3).
+\]
+Thus, in decreasing order of $r$, the $A_r$ are the $n-2$ singleton levels
+immediately above the one-$E$ minimum, and $A_0=X_n$ is the largest of them.
+
+For a three-$E$ word ending in $D$, equality in the lower estimate
+$M\geq M(Y_n)$ can occur only for the position pairs
+$(2,4)$ and $(m-5,m-3)$.  The first decodes to a word beginning
+$\RR\RR\UU\UU$ and violates the rational-Dyck inequality at that prefix.
+The second decodes to $Y_n$.  The strict replacement argument already shows
+that every word with at least five $E$-blocks lies above this level.  Hence
+$Y_n$ is the unique next path.  This completes the proof of all assertions in
+Theorem~\ref{thm:nonlocal}.
+
+\section{Computational verification and formalization status}
+\label{sec:formal}
+
+All computations used in the paper are finite and exact.  The two paths in
+Theorem~\ref{thm:counterexample} are checked by direct prefix tests, integer
+matrix multiplication, and a graph-intrinsic dihedral invariant.  The bounded
+claim in Proposition~\ref{prop:minimal} is checked by two independent
+enumerations.  The best-first construction and representative prefix
+certificates have also been compared with exhaustive enumeration on finite
+ranges.  Every comparison uses integers or reduced rational squares.
+
+The finite statement in Proposition~\ref{prop:minimal} is confined to total
+length at most $25$.  In contrast, Theorems~\ref{thm:band-classes},
+\ref{thm:global-cover},~\ref{thm:parity}, and~\ref{thm:nonlocal} are uniform
+mathematical statements proved in the preceding sections.
+
+The accompanying Lean~4 development uses Mathlib~\cite{Lean4,Mathlib}.  It
+formalizes the rational-Dyck carrier, both exact matrix scores, and the literal
+cyclic square-band quotient.  It proves that every chordless four-cycle of the
+band is a tile, that the shared-edge graph of the tiles is the required cycle,
+and that its adjacent-edge decoration is exactly the cyclic
+equality/difference code.  This yields Theorem~\ref{thm:band-classes} on the
+literal quotient graph.  Burnside counting of the resulting involution,
+including the odd- and even-reflection fixed-point counts, gives
+Corollary~\ref{cor:band-count} and its Catalan specialization.
+
+For the counterexample, Lean checks the two carrier conditions, the displayed
+identity for the square of the literal real periodic Lagrange value, and
+nonisomorphism of the literal quotient bands.  It also
+proves the minimality theorem for every coprime endpoint of total length at
+most $25$.  The finite search contributes ordinary data only: the kernel
+recomputes all $934{,}635$ path assignments, the $471{,}455$ exact score
+classes, the $22{,}569$ prefix regions, and the complete endpoint range.
+
+For the cover problem, the development defines the actual frontier state and
+its two transitions: erase and expand a selected nonleaf by precisely its
+feasible children, or erase and append a selected leaf to the output.  It
+proves preservation of the frontier partition, antichain, score-order, and
+completeness invariants.  The potential
+$\sum_{\alpha}3^{a+b-|\alpha|}$ strictly decreases at every transition, so the
+traversal terminates with the output a permutation of all carrier paths.  This
+constructs complete best-first runs for both manuscript keys and proves their
+score order and equality-batch completeness.  The development also proves the
+consecutive-level and complete-bipartite
+characterizations, both prefix-antichain equivalences, the matching and
+Lagrange prefix bounds, the endpoint-parity and unit-gap results, all four
+local-interchange identities, the Pell extremal lemma, and the complete
+nonlocal family of Theorem~\ref{thm:nonlocal}.  The large minimality
+certificate is split into independently compiled class, assignment,
+compact-frontier, and endpoint modules.  The publication root, the exact
+manuscript formula map, the theorem map, and the axiom report are compiled with
+\texttt{--trust=0} under a 32GB aggregate memory limit.
+
+The development has no project axiom, opaque theorem, native-evaluation
+bridge, or published-result premise.  It defines a square snake as an explicit
+finite vertex-and-edge type and a perfect matching as an edge selection meeting
+every vertex exactly once; local equivalences prove the two-state recurrence
+above.  It also defines the periodic Lagrange value by the standard maximum of
+forward-plus-backward cut values, proves that the backward value is the
+negative conjugate, and derives equation~\eqref{eq:L-square}.  The axiom report
+for every publication endpoint contains only Lean/Mathlib's standard
+\texttt{propext}, \texttt{Classical.choice}, and \texttt{Quot.sound}.
+
+No theorem-valued certificate or search conclusion is assumed.  The same is
+true of every path-code translation, graph isomorphism, cover implication,
+counting identity, and final composition.  Every numbered result has an
+explicit entry in the accompanying manuscript-to-Lean map.  The
+reproducibility documentation records the exact commands, generated-source
+counts, formula and theorem maps, and trust report.
+
+\paragraph{Data and code availability.}
+The Lean source, exact certificates, verification scripts, manuscript, and
+camera-ready PDF are available at
+\url{https://github.com/crabsatellite/lattice-path-orders}; versioned releases
+are archived through Zenodo.
+
+\section*{Declaration of generative AI and AI-assisted technologies in the
+manuscript preparation process}
+
+During the preparation of this work, the author used OpenAI Codex and an
+author-developed local research system for proof development, code,
+copy-editing, and the Lean~4 formalization.  The author checked the claims and
+citations, matched the manuscript statements to the Lean declarations, and
+reran the finite checks, formal build, and axiom audit.  AI output is not
+mathematical evidence; the author is responsible for the definitions, proofs,
+citations, code, and manuscript.  Further technical details will be disclosed
+separately.
+
+\section*{Acknowledgements}
+
+The author thanks the developers of Lean and Mathlib for the formalization
+environment.
+
+\bibliographystyle{amsplain}
+\bibliography{references}
+
+\end{document}

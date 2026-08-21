@@ -1,0 +1,1490 @@
+{
+  "a": 13,
+  "b": 12,
+  "certificate_frontier_size": 122,
+  "claim_status": "exact prefix-antichain cover certificate",
+  "disposition_counts": {
+    "at_or_above_upper_level": 110,
+    "at_or_below_lower_level": 12
+  },
+  "expanded_prefix_count": 143,
+  "frontier": [
+    {
+      "disposition": "at_or_below_lower_level",
+      "lower_bound": [
+        1311738121,
+        1
+      ],
+      "prefix": "RRURURURURURURURURURURU",
+      "upper_bound": [
+        1404960479,
+        1
+      ]
+    },
+    {
+      "disposition": "at_or_below_lower_level",
+      "lower_bound": [
+        1388966051,
+        1
+      ],
+      "prefix": "RRURURURURURURURURURURRU",
+      "upper_bound": [
+        1388966051,
+        1
+      ]
+    },
+    {
+      "disposition": "at_or_above_upper_level",
+      "lower_bound": [
+        1468467359,
+        1
+      ],
+      "prefix": "RRURURURURURURURURURRUU",
+      "upper_bound": [
+        1606928791,
+        1
+      ]
+    },
+    {
+      "disposition": "at_or_below_lower_level",
+      "lower_bound": [
+        1391239429,
+        1
+      ],
+      "prefix": "RRURURURURURURURURURRURU",
+      "upper_bound": [
+        1391239429,
+        1
+      ]
+    },
+    {
+      "disposition": "at_or_above_upper_level",
+      "lower_bound": [
+        1504337114,
+        1
+      ],
+      "prefix": "RRURURURURURURURURURRR",
+      "upper_bound": [
+        1787885087,
+        1
+      ]
+    },
+    {
+      "disposition": "at_or_above_upper_level",
+      "lower_bound": [
+        1470807659,
+        1
+      ],
+      "prefix": "RRURURURURURURURURRUU",
+      "upper_bound": [
+        1889050408,
+        1
+      ]
+    },
+    {
+      "disposition": "at_or_above_upper_level",
+      "lower_bound": [
+        1473081037,
+        1
+      ],
+      "prefix": "RRURURURURURURURURRURUU",
+      "upper_bound": [
+        1612874183,
+        1
+      ]
+    },
+    {
+      "disposition": "at_or_below_lower_level",
+      "lower_bound": [
+        1391306351,
+        1
+      ],
+      "prefix": "RRURURURURURURURURRURURU",
+      "upper_bound": [
+        1391306351,
+        1
+      ]
+    },
+    {
+      "disposition": "at_or_above_upper_level",
+      "lower_bound": [
+        1476961936,
+        1
+      ],
+      "prefix": "RRURURURURURURURURRURR",
+      "upper_bound": [
+        1749923119,
+        1
+      ]
+    },
+    {
+      "disposition": "at_or_above_upper_level",
+      "lower_bound": [
+        1503852422,
+        1
+      ],
+      "prefix": "RRURURURURURURURURRR",
+      "upper_bound": [
+        2102499853,
+        1
+      ]
+    },
+    {
+      "disposition": "at_or_above_upper_level",
+      "lower_bound": [
+        1470876551,
+        1
+      ],
+      "prefix": "RRURURURURURURURRUU",
+      "upper_bound": [
+        2221465103,
+        1
+      ]
+    },
+    {
+      "disposition": "at_or_above_upper_level",
+      "lower_bound": [
+        1475490229,
+        1
+      ],
+      "prefix": "RRURURURURURURURRURUU",
+      "upper_bound": [
+        1896123962,
+        1
+      ]
+    },
+    {
+      "disposition": "at_or_above_upper_level",
+      "lower_bound": [
+        1473216851,
+        1
+      ],
+      "prefix": "RRURURURURURURURRURURUU",
+      "upper_bound": [
+        1613049199,
+        1
+      ]
+    },
+    {
+      "disposition": "at_or_below_lower_level",
+      "lower_bound": [
+        1391308321,
+        1
+      ],
+      "prefix": "RRURURURURURURURRURURURU",
+      "upper_bound": [
+        1391308321,
+        1
+      ]
+    },
+    {
+      "disposition": "at_or_above_upper_level",
+      "lower_bound": [
+        1476156086,
+        1
+      ],
+      "prefix": "RRURURURURURURURRURURR",
+      "upper_bound": [
+        1748805623,
+        1
+      ]
+    },
+    {
+      "disposition": "at_or_above_upper_level",
+      "lower_bound": [
+        1476546136,
+        1
+      ],
+      "prefix": "RRURURURURURURURRURR",
+      "upper_bound": [
+        2057781887,
+        1
+      ]
+    },
+    {
+      "disposition": "at_or_above_upper_level",
+      "lower_bound": [
+        1503838154,
+        1
+      ],
+      "prefix": "RRURURURURURURURRR",
+      "upper_bound": [
+        2472493192,
+        1
+      ]
+    },
+    {
+      "disposition": "at_or_above_upper_level",
+      "lower_bound": [
+        1470878579,
+        1
+      ],
+      "prefix": "RRURURURURURURRUU",
+      "upper_bound": [
+        2612393633,
+        1
+      ]
+    },
+    {
+      "disposition": "at_or_above_upper_level",
+      "lower_bound": [
+        1475561149,
+        1
+      ],
+      "prefix": "RRURURURURURURRURUU",
+      "upper_bound": [
+        2229785497,
+        1
+      ]
+    },
+    {
+      "disposition": "at_or_above_upper_level",
+      "lower_bound": [
+        1475628071,
+        1
+      ],
+      "prefix": "RRURURURURURURRURURUU",
+      "upper_bound": [
+        1896332188,
+        1
+      ]
+    },
+    {
+      "disposition": "at_or_above_upper_level",
+      "lower_bound": [
+        1473220849,
+        1
+      ],
+      "prefix": "RRURURURURURURRURURURUU",
+      "upper_bound": [
+        1613054351,
+        1
+      ]
+    },
+    {
+      "disposition": "at_or_below_lower_level",
+      "lower_bound": [
+        1391308379,
+        1
+      ],
+      "prefix": "RRURURURURURURRURURURURU",
+      "upper_bound": [
+        1391308379,
+        1
+      ]
+    },
+    {
+      "disposition": "at_or_above_upper_level",
+      "lower_bound": [
+        1476132364,
+        1
+      ],
+      "prefix": "RRURURURURURURRURURURR",
+      "upper_bound": [
+        1748772727,
+        1
+      ]
+    },
+    {
+      "disposition": "at_or_above_upper_level",
+      "lower_bound": [
+        1475742314,
+        1
+      ],
+      "prefix": "RRURURURURURURRURURR",
+      "upper_bound": [
+        2056465513,
+        1
+      ]
+    },
+    {
+      "disposition": "at_or_above_upper_level",
+      "lower_bound": [
+        1476533896,
+        1
+      ],
+      "prefix": "RRURURURURURURRURR",
+      "upper_bound": [
+        2419903958,
+        1
+      ]
+    },
+    {
+      "disposition": "at_or_above_upper_level",
+      "lower_bound": [
+        1503837734,
+        1
+      ],
+      "prefix": "RRURURURURURURRR",
+      "upper_bound": [
+        2907597545,
+        1
+      ]
+    },
+    {
+      "disposition": "at_or_above_upper_level",
+      "lower_bound": [
+        1470878639,
+        1
+      ],
+      "prefix": "RRURURURURURRUU",
+      "upper_bound": [
+        3072117382,
+        1
+      ]
+    },
+    {
+      "disposition": "at_or_above_upper_level",
+      "lower_bound": [
+        1475563237,
+        1
+      ],
+      "prefix": "RRURURURURURRURUU",
+      "upper_bound": [
+        2622178285,
+        1
+      ]
+    },
+    {
+      "disposition": "at_or_above_upper_level",
+      "lower_bound": [
+        1475699051,
+        1
+      ],
+      "prefix": "RRURURURURURRURURUU",
+      "upper_bound": [
+        2230030427,
+        1
+      ]
+    },
+    {
+      "disposition": "at_or_above_upper_level",
+      "lower_bound": [
+        1475632129,
+        1
+      ],
+      "prefix": "RRURURURURURRURURURUU",
+      "upper_bound": [
+        1896338318,
+        1
+      ]
+    },
+    {
+      "disposition": "at_or_above_upper_level",
+      "lower_bound": [
+        1473220967,
+        1
+      ],
+      "prefix": "RRURURURURURRURURURURUU",
+      "upper_bound": [
+        1613054503,
+        1
+      ]
+    },
+    {
+      "disposition": "at_or_below_lower_level",
+      "lower_bound": [
+        1391308381,
+        1
+      ],
+      "prefix": "RRURURURURURRURURURURURU",
+      "upper_bound": [
+        1391308381,
+        1
+      ]
+    },
+    {
+      "disposition": "at_or_above_upper_level",
+      "lower_bound": [
+        1476131666,
+        1
+      ],
+      "prefix": "RRURURURURURRURURURURR",
+      "upper_bound": [
+        1748771759,
+        1
+      ]
+    },
+    {
+      "disposition": "at_or_above_upper_level",
+      "lower_bound": [
+        1475718652,
+        1
+      ],
+      "prefix": "RRURURURURURRURURURR",
+      "upper_bound": [
+        2056426763,
+        1
+      ]
+    },
+    {
+      "disposition": "at_or_above_upper_level",
+      "lower_bound": [
+        1475730134,
+        1
+      ],
+      "prefix": "RRURURURURURRURURR",
+      "upper_bound": [
+        2418355876,
+        1
+      ]
+    },
+    {
+      "disposition": "at_or_above_upper_level",
+      "lower_bound": [
+        1476533536,
+        1
+      ],
+      "prefix": "RRURURURURURRURR",
+      "upper_bound": [
+        2845753717,
+        1
+      ]
+    },
+    {
+      "disposition": "at_or_above_upper_level",
+      "lower_bound": [
+        1503837722,
+        1
+      ],
+      "prefix": "RRURURURURURRR",
+      "upper_bound": [
+        3419270693,
+        1
+      ]
+    },
+    {
+      "disposition": "at_or_above_upper_level",
+      "lower_bound": [
+        1470878651,
+        1
+      ],
+      "prefix": "RRURURURURRUU",
+      "upper_bound": [
+        3612742423,
+        1
+      ]
+    },
+    {
+      "disposition": "at_or_above_upper_level",
+      "lower_bound": [
+        1475563309,
+        1
+      ],
+      "prefix": "RRURURURURRURUU",
+      "upper_bound": [
+        3083623940,
+        1
+      ]
+    },
+    {
+      "disposition": "at_or_above_upper_level",
+      "lower_bound": [
+        1475701151,
+        1
+      ],
+      "prefix": "RRURURURURRURURUU",
+      "upper_bound": [
+        2622466337,
+        1
+      ]
+    },
+    {
+      "disposition": "at_or_above_upper_level",
+      "lower_bound": [
+        1475703121,
+        1
+      ],
+      "prefix": "RRURURURURRURURURUU",
+      "upper_bound": [
+        2230037653,
+        1
+      ]
+    },
+    {
+      "disposition": "at_or_above_upper_level",
+      "lower_bound": [
+        1475632259,
+        1
+      ],
+      "prefix": "RRURURURURRURURURURUU",
+      "upper_bound": [
+        1896338512,
+        1
+      ]
+    },
+    {
+      "disposition": "at_or_above_upper_level",
+      "lower_bound": [
+        1473220981,
+        1
+      ],
+      "prefix": "RRURURURURRURURURURURUU",
+      "upper_bound": [
+        1613054519,
+        1
+      ]
+    },
+    {
+      "disposition": "at_or_below_lower_level",
+      "lower_bound": [
+        1391308391,
+        1
+      ],
+      "prefix": "RRURURURURRURURURURURURU",
+      "upper_bound": [
+        1391308391,
+        1
+      ]
+    },
+    {
+      "disposition": "at_or_above_upper_level",
+      "lower_bound": [
+        1476131656,
+        1
+      ],
+      "prefix": "RRURURURURRURURURURURR",
+      "upper_bound": [
+        1748771743,
+        1
+      ]
+    },
+    {
+      "disposition": "at_or_above_upper_level",
+      "lower_bound": [
+        1475717966,
+        1
+      ],
+      "prefix": "RRURURURURRURURURURR",
+      "upper_bound": [
+        2056425637,
+        1
+      ]
+    },
+    {
+      "disposition": "at_or_above_upper_level",
+      "lower_bound": [
+        1475706484,
+        1
+      ],
+      "prefix": "RRURURURURRURURURR",
+      "upper_bound": [
+        2418310322,
+        1
+      ]
+    },
+    {
+      "disposition": "at_or_above_upper_level",
+      "lower_bound": [
+        1475729786,
+        1
+      ],
+      "prefix": "RRURURURURRURURR",
+      "upper_bound": [
+        2843933225,
+        1
+      ]
+    },
+    {
+      "disposition": "at_or_above_upper_level",
+      "lower_bound": [
+        1476533536,
+        1
+      ],
+      "prefix": "RRURURURURRURR",
+      "upper_bound": [
+        3346543735,
+        1
+      ]
+    },
+    {
+      "disposition": "at_or_above_upper_level",
+      "lower_bound": [
+        1503837734,
+        1
+      ],
+      "prefix": "RRURURURURRR",
+      "upper_bound": [
+        4020987082,
+        1
+      ]
+    },
+    {
+      "disposition": "at_or_above_upper_level",
+      "lower_bound": [
+        1470878999,
+        1
+      ],
+      "prefix": "RRURURURRUU",
+      "upper_bound": [
+        4248506543,
+        1
+      ]
+    },
+    {
+      "disposition": "at_or_above_upper_level",
+      "lower_bound": [
+        1475563669,
+        1
+      ],
+      "prefix": "RRURURURRURUU",
+      "upper_bound": [
+        3626274737,
+        1
+      ]
+    },
+    {
+      "disposition": "at_or_above_upper_level",
+      "lower_bound": [
+        1475701571,
+        1
+      ],
+      "prefix": "RRURURURRURURUU",
+      "upper_bound": [
+        3083963410,
+        1
+      ]
+    },
+    {
+      "disposition": "at_or_above_upper_level",
+      "lower_bound": [
+        1475705569,
+        1
+      ],
+      "prefix": "RRURURURRURURURUU",
+      "upper_bound": [
+        2622475453,
+        1
+      ]
+    },
+    {
+      "disposition": "at_or_above_upper_level",
+      "lower_bound": [
+        1475703599,
+        1
+      ],
+      "prefix": "RRURURURRURURURURUU",
+      "upper_bound": [
+        2230038407,
+        1
+      ]
+    },
+    {
+      "disposition": "at_or_above_upper_level",
+      "lower_bound": [
+        1475632621,
+        1
+      ],
+      "prefix": "RRURURURRURURURURURUU",
+      "upper_bound": [
+        1896338978,
+        1
+      ]
+    },
+    {
+      "disposition": "at_or_above_upper_level",
+      "lower_bound": [
+        1473221339,
+        1
+      ],
+      "prefix": "RRURURURRURURURURURURUU",
+      "upper_bound": [
+        1613054911,
+        1
+      ]
+    },
+    {
+      "disposition": "at_or_below_lower_level",
+      "lower_bound": [
+        1391308729,
+        1
+      ],
+      "prefix": "RRURURURRURURURURURURURU",
+      "upper_bound": [
+        1391308729,
+        1
+      ]
+    },
+    {
+      "disposition": "at_or_above_upper_level",
+      "lower_bound": [
+        1476132014,
+        1
+      ],
+      "prefix": "RRURURURRURURURURURURR",
+      "upper_bound": [
+        1748772167,
+        1
+      ]
+    },
+    {
+      "disposition": "at_or_above_upper_level",
+      "lower_bound": [
+        1475718304,
+        1
+      ],
+      "prefix": "RRURURURRURURURURURR",
+      "upper_bound": [
+        2056426103,
+        1
+      ]
+    },
+    {
+      "disposition": "at_or_above_upper_level",
+      "lower_bound": [
+        1475706146,
+        1
+      ],
+      "prefix": "RRURURURRURURURURR",
+      "upper_bound": [
+        2418309568,
+        1
+      ]
+    },
+    {
+      "disposition": "at_or_above_upper_level",
+      "lower_bound": [
+        1475706484,
+        1
+      ],
+      "prefix": "RRURURURRURURURR",
+      "upper_bound": [
+        2843880325,
+        1
+      ]
+    },
+    {
+      "disposition": "at_or_above_upper_level",
+      "lower_bound": [
+        1475730134,
+        1
+      ],
+      "prefix": "RRURURURRURURR",
+      "upper_bound": [
+        3344403665,
+        1
+      ]
+    },
+    {
+      "disposition": "at_or_above_upper_level",
+      "lower_bound": [
+        1476533896,
+        1
+      ],
+      "prefix": "RRURURURRURR",
+      "upper_bound": [
+        3935462708,
+        1
+      ]
+    },
+    {
+      "disposition": "at_or_above_upper_level",
+      "lower_bound": [
+        1503838154,
+        1
+      ],
+      "prefix": "RRURURURRR",
+      "upper_bound": [
+        4728593623,
+        1
+      ]
+    },
+    {
+      "disposition": "at_or_above_upper_level",
+      "lower_bound": [
+        1470890819,
+        1
+      ],
+      "prefix": "RRURURRUU",
+      "upper_bound": [
+        4996190108,
+        1
+      ]
+    },
+    {
+      "disposition": "at_or_above_upper_level",
+      "lower_bound": [
+        1475575837,
+        1
+      ],
+      "prefix": "RRURURRURUU",
+      "upper_bound": [
+        4264454407,
+        1
+      ]
+    },
+    {
+      "disposition": "at_or_above_upper_level",
+      "lower_bound": [
+        1475713751,
+        1
+      ],
+      "prefix": "RRURURRURURUU",
+      "upper_bound": [
+        3626702995,
+        1
+      ]
+    },
+    {
+      "disposition": "at_or_above_upper_level",
+      "lower_bound": [
+        1475717809,
+        1
+      ],
+      "prefix": "RRURURRURURURUU",
+      "upper_bound": [
+        3083998832,
+        1
+      ]
+    },
+    {
+      "disposition": "at_or_above_upper_level",
+      "lower_bound": [
+        1475717867,
+        1
+      ],
+      "prefix": "RRURURRURURURURUU",
+      "upper_bound": [
+        2622497345,
+        1
+      ]
+    },
+    {
+      "disposition": "at_or_above_upper_level",
+      "lower_bound": [
+        1475715781,
+        1
+      ],
+      "prefix": "RRURURRURURURURURUU",
+      "upper_bound": [
+        2230056817,
+        1
+      ]
+    },
+    {
+      "disposition": "at_or_above_upper_level",
+      "lower_bound": [
+        1475644799,
+        1
+      ],
+      "prefix": "RRURURRURURURURURURUU",
+      "upper_bound": [
+        1896354628,
+        1
+      ]
+    },
+    {
+      "disposition": "at_or_above_upper_level",
+      "lower_bound": [
+        1473233497,
+        1
+      ],
+      "prefix": "RRURURRURURURURURURURUU",
+      "upper_bound": [
+        1613068223,
+        1
+      ]
+    },
+    {
+      "disposition": "at_or_below_lower_level",
+      "lower_bound": [
+        1391320211,
+        1
+      ],
+      "prefix": "RRURURRURURURURURURURURU",
+      "upper_bound": [
+        1391320211,
+        1
+      ]
+    },
+    {
+      "disposition": "at_or_above_upper_level",
+      "lower_bound": [
+        1476144196,
+        1
+      ],
+      "prefix": "RRURURRURURURURURURURR",
+      "upper_bound": [
+        1748786599,
+        1
+      ]
+    },
+    {
+      "disposition": "at_or_above_upper_level",
+      "lower_bound": [
+        1475730482,
+        1
+      ],
+      "prefix": "RRURURRURURURURURURR",
+      "upper_bound": [
+        2056443073,
+        1
+      ]
+    },
+    {
+      "disposition": "at_or_above_upper_level",
+      "lower_bound": [
+        1475718304,
+        1
+      ],
+      "prefix": "RRURURRURURURURURR",
+      "upper_bound": [
+        2418329486,
+        1
+      ]
+    },
+    {
+      "disposition": "at_or_above_upper_level",
+      "lower_bound": [
+        1475717966,
+        1
+      ],
+      "prefix": "RRURURRURURURURR",
+      "upper_bound": [
+        2843902217,
+        1
+      ]
+    },
+    {
+      "disposition": "at_or_above_upper_level",
+      "lower_bound": [
+        1475718652,
+        1
+      ],
+      "prefix": "RRURURRURURURR",
+      "upper_bound": [
+        3344368243,
+        1
+      ]
+    },
+    {
+      "disposition": "at_or_above_upper_level",
+      "lower_bound": [
+        1475742314,
+        1
+      ],
+      "prefix": "RRURURRURURR",
+      "upper_bound": [
+        3932977534,
+        1
+      ]
+    },
+    {
+      "disposition": "at_or_above_upper_level",
+      "lower_bound": [
+        1476546136,
+        1
+      ],
+      "prefix": "RRURURRURR",
+      "upper_bound": [
+        4628055887,
+        1
+      ]
+    },
+    {
+      "disposition": "at_or_above_upper_level",
+      "lower_bound": [
+        1503852422,
+        1
+      ],
+      "prefix": "RRURURRR",
+      "upper_bound": [
+        5560775921,
+        1
+      ]
+    },
+    {
+      "disposition": "at_or_above_upper_level",
+      "lower_bound": [
+        1471292351,
+        1
+      ],
+      "prefix": "RRURRUU",
+      "upper_bound": [
+        5877005851,
+        1
+      ]
+    },
+    {
+      "disposition": "at_or_above_upper_level",
+      "lower_bound": [
+        1475989189,
+        1
+      ],
+      "prefix": "RRURRURUU",
+      "upper_bound": [
+        5016309118,
+        1
+      ]
+    },
+    {
+      "disposition": "at_or_above_upper_level",
+      "lower_bound": [
+        1476127451,
+        1
+      ],
+      "prefix": "RRURRURURUU",
+      "upper_bound": [
+        4266118487,
+        1
+      ]
+    },
+    {
+      "disposition": "at_or_above_upper_level",
+      "lower_bound": [
+        1476131521,
+        1
+      ],
+      "prefix": "RRURRURURURUU",
+      "upper_bound": [
+        3627731453,
+        1
+      ]
+    },
+    {
+      "disposition": "at_or_above_upper_level",
+      "lower_bound": [
+        1476131639,
+        1
+      ],
+      "prefix": "RRURRURURURURUU",
+      "upper_bound": [
+        3084863710,
+        1
+      ]
+    },
+    {
+      "disposition": "at_or_above_upper_level",
+      "lower_bound": [
+        1476131581,
+        1
+      ],
+      "prefix": "RRURRURURURURURUU",
+      "upper_bound": [
+        2623232557,
+        1
+      ]
+    },
+    {
+      "disposition": "at_or_above_upper_level",
+      "lower_bound": [
+        1476129491,
+        1
+      ],
+      "prefix": "RRURRURURURURURURUU",
+      "upper_bound": [
+        2230682003,
+        1
+      ]
+    },
+    {
+      "disposition": "at_or_above_upper_level",
+      "lower_bound": [
+        1476058489,
+        1
+      ],
+      "prefix": "RRURRURURURURURURURUU",
+      "upper_bound": [
+        1896886262,
+        1
+      ]
+    },
+    {
+      "disposition": "at_or_above_upper_level",
+      "lower_bound": [
+        1473646511,
+        1
+      ],
+      "prefix": "RRURRURURURURURURURURUU",
+      "upper_bound": [
+        1613520439,
+        1
+      ]
+    },
+    {
+      "disposition": "at_or_below_lower_level",
+      "lower_bound": [
+        1391710261,
+        1
+      ],
+      "prefix": "RRURRURURURURURURURURURU",
+      "upper_bound": [
+        1391710261,
+        1
+      ]
+    },
+    {
+      "disposition": "at_or_above_upper_level",
+      "lower_bound": [
+        1476558026,
+        1
+      ],
+      "prefix": "RRURRURURURURURURURURR",
+      "upper_bound": [
+        1749276863,
+        1
+      ]
+    },
+    {
+      "disposition": "at_or_above_upper_level",
+      "lower_bound": [
+        1476144196,
+        1
+      ],
+      "prefix": "RRURRURURURURURURURR",
+      "upper_bound": [
+        2057019587,
+        1
+      ]
+    },
+    {
+      "disposition": "at_or_above_upper_level",
+      "lower_bound": [
+        1476132014,
+        1
+      ],
+      "prefix": "RRURRURURURURURURR",
+      "upper_bound": [
+        2419007452,
+        1
+      ]
+    },
+    {
+      "disposition": "at_or_above_upper_level",
+      "lower_bound": [
+        1476131656,
+        1
+      ],
+      "prefix": "RRURRURURURURURR",
+      "upper_bound": [
+        2844699445,
+        1
+      ]
+    },
+    {
+      "disposition": "at_or_above_upper_level",
+      "lower_bound": [
+        1476131666,
+        1
+      ],
+      "prefix": "RRURRURURURURR",
+      "upper_bound": [
+        3345303965,
+        1
+      ]
+    },
+    {
+      "disposition": "at_or_above_upper_level",
+      "lower_bound": [
+        1476132364,
+        1
+      ],
+      "prefix": "RRURRURURURR",
+      "upper_bound": [
+        3934005992,
+        1
+      ]
+    },
+    {
+      "disposition": "at_or_above_upper_level",
+      "lower_bound": [
+        1476156086,
+        1
+      ],
+      "prefix": "RRURRURURR",
+      "upper_bound": [
+        4626391807,
+        1
+      ]
+    },
+    {
+      "disposition": "at_or_above_upper_level",
+      "lower_bound": [
+        1476961936,
+        1
+      ],
+      "prefix": "RRURRURR",
+      "upper_bound": [
+        5444025643,
+        1
+      ]
+    },
+    {
+      "disposition": "at_or_above_upper_level",
+      "lower_bound": [
+        1504337114,
+        1
+      ],
+      "prefix": "RRURRR",
+      "upper_bound": [
+        6541504724,
+        1
+      ]
+    },
+    {
+      "disposition": "at_or_above_upper_level",
+      "lower_bound": [
+        1484932619,
+        1
+      ],
+      "prefix": "RRRUU",
+      "upper_bound": [
+        6974999161,
+        1
+      ]
+    },
+    {
+      "disposition": "at_or_above_upper_level",
+      "lower_bound": [
+        1490030989,
+        1
+      ],
+      "prefix": "RRRURUU",
+      "upper_bound": [
+        5955182189,
+        1
+      ]
+    },
+    {
+      "disposition": "at_or_above_upper_level",
+      "lower_bound": [
+        1490181071,
+        1
+      ],
+      "prefix": "RRRURURUU",
+      "upper_bound": [
+        5064624752,
+        1
+      ]
+    },
+    {
+      "disposition": "at_or_above_upper_level",
+      "lower_bound": [
+        1490185489,
+        1
+      ],
+      "prefix": "RRRURURURUU",
+      "upper_bound": [
+        4306749343,
+        1
+      ]
+    },
+    {
+      "disposition": "at_or_above_upper_level",
+      "lower_bound": [
+        1490185619,
+        1
+      ],
+      "prefix": "RRRURURURURUU",
+      "upper_bound": [
+        3662270767,
+        1
+      ]
+    },
+    {
+      "disposition": "at_or_above_upper_level",
+      "lower_bound": [
+        1490185621,
+        1
+      ],
+      "prefix": "RRRURURURURURUU",
+      "upper_bound": [
+        3114234140,
+        1
+      ]
+    },
+    {
+      "disposition": "at_or_above_upper_level",
+      "lower_bound": [
+        1490185559,
+        1
+      ],
+      "prefix": "RRRURURURURURURUU",
+      "upper_bound": [
+        2648207873,
+        1
+      ]
+    },
+    {
+      "disposition": "at_or_above_upper_level",
+      "lower_bound": [
+        1490183449,
+        1
+      ],
+      "prefix": "RRRURURURURURURURUU",
+      "upper_bound": [
+        2251919917,
+        1
+      ]
+    },
+    {
+      "disposition": "at_or_above_upper_level",
+      "lower_bound": [
+        1490111771,
+        1
+      ],
+      "prefix": "RRRURURURURURURURURUU",
+      "upper_bound": [
+        1914946168,
+        1
+      ]
+    },
+    {
+      "disposition": "at_or_above_upper_level",
+      "lower_bound": [
+        1487676829,
+        1
+      ],
+      "prefix": "RRRURURURURURURURURURUU",
+      "upper_bound": [
+        1628882471,
+        1
+      ]
+    },
+    {
+      "disposition": "at_or_below_lower_level",
+      "lower_bound": [
+        1404960479,
+        1
+      ],
+      "prefix": "RRRURURURURURURURURURURU",
+      "upper_bound": [
+        1404960479,
+        1
+      ]
+    },
+    {
+      "disposition": "at_or_above_upper_level",
+      "lower_bound": [
+        1490616064,
+        1
+      ],
+      "prefix": "RRRURURURURURURURURURR",
+      "upper_bound": [
+        1765931407,
+        1
+      ]
+    },
+    {
+      "disposition": "at_or_above_upper_level",
+      "lower_bound": [
+        1490198294,
+        1
+      ],
+      "prefix": "RRRURURURURURURURURR",
+      "upper_bound": [
+        2076604093,
+        1
+      ]
+    },
+    {
+      "disposition": "at_or_above_upper_level",
+      "lower_bound": [
+        1490185996,
+        1
+      ],
+      "prefix": "RRRURURURURURURURR",
+      "upper_bound": [
+        2442038378,
+        1
+      ]
+    },
+    {
+      "disposition": "at_or_above_upper_level",
+      "lower_bound": [
+        1490185634,
+        1
+      ],
+      "prefix": "RRRURURURURURURR",
+      "upper_bound": [
+        2871783305,
+        1
+      ]
+    },
+    {
+      "disposition": "at_or_above_upper_level",
+      "lower_bound": [
+        1490185624,
+        1
+      ],
+      "prefix": "RRRURURURURURR",
+      "upper_bound": [
+        3377153935,
+        1
+      ]
+    },
+    {
+      "disposition": "at_or_above_upper_level",
+      "lower_bound": [
+        1490185646,
+        1
+      ],
+      "prefix": "RRRURURURURR",
+      "upper_bound": [
+        3971458738,
+        1
+      ]
+    },
+    {
+      "disposition": "at_or_above_upper_level",
+      "lower_bound": [
+        1490186404,
+        1
+      ],
+      "prefix": "RRRURURURR",
+      "upper_bound": [
+        4670350823,
+        1
+      ]
+    },
+    {
+      "disposition": "at_or_above_upper_level",
+      "lower_bound": [
+        1490212154,
+        1
+      ],
+      "prefix": "RRRURURR",
+      "upper_bound": [
+        5492341277,
+        1
+      ]
+    },
+    {
+      "disposition": "at_or_above_upper_level",
+      "lower_bound": [
+        1491086896,
+        1
+      ],
+      "prefix": "RRRURR",
+      "upper_bound": [
+        6463328386,
+        1
+      ]
+    },
+    {
+      "disposition": "at_or_above_upper_level",
+      "lower_bound": [
+        1520802374,
+        1
+      ],
+      "prefix": "RRRR",
+      "upper_bound": [
+        7778742049,
+        1
+      ]
+    }
+  ],
+  "intermediate_witness": null,
+  "is_cover": true,
+  "lower_path": "RRRURURURURURURURURURURUU",
+  "lower_score": [
+    1404960479,
+    1
+  ],
+  "order": "matching",
+  "upper_path": "RRURURURURURURURURURRUURU",
+  "upper_score": [
+    1468467359,
+    1
+  ]
+}
