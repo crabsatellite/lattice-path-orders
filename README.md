@@ -93,6 +93,15 @@ The canonical repository is
 [crabsatellite/lattice-path-orders](https://github.com/crabsatellite/lattice-path-orders).
 Versioned releases are archived through Zenodo.
 
+Archive identifiers:
+
+- Paper concept DOI: [10.5281/zenodo.21980889](https://doi.org/10.5281/zenodo.21980889)
+- Software/formalization concept DOI: [10.5281/zenodo.22043105](https://doi.org/10.5281/zenodo.22043105)
+
+The two Zenodo records are linked as paper and software supplements. Cite the
+concept DOIs above when referring to the evolving paper or code archive; cite
+a version DOI when exact artifact identity is required.
+
 ## Licensing
 
 See `LICENSE.md`. Lean sources, verification scripts, data, and repository

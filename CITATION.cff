@@ -13,8 +13,9 @@ preferred-citation:
   type: article
   title: "Lagrange Collisions and Cover Relations for Rational Dyck Paths"
   year: 2026
+  doi: "10.5281/zenodo.21980889"
   authors:
     - family-names: Li
       given-names: Alex Chengyu
       orcid: "https://orcid.org/0009-0008-4516-8946"
-  url: "https://github.com/crabsatellite/lattice-path-orders/releases/tag/v1.0.0"
+  url: "https://doi.org/10.5281/zenodo.21980889"
