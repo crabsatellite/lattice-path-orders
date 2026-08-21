@@ -50,6 +50,22 @@ correspondence is in `FORMULA_MAP.md` and
 `lean4/LatticePathOrdersKernel/ManuscriptFormulaMap.lean`.  The expected terminal line begins
 `[kernel-only-audit:ok]`.
 
+## Prebuilt project cache
+
+The `v1.0.0` GitHub release provides independently extractable ZIP shards and
+a manifest named `lattice-path-orders-lean-cache-v1.0.0-manifest.json`.
+Each manifest entry records the release commit, Lean toolchain, source binding,
+shard SHA-256, and per-file SHA-256. Download the assets and run:
+
+    python -B scripts\install_release_cache.py --asset-dir cache-assets
+
+To regenerate the release assets after a complete verified build:
+
+    python -B scripts\package_release_cache.py --tag v1.0.0
+
+Mathlib is deliberately not duplicated in these assets; obtain its compatible
+upstream cache with `lake exe cache get` before installing the project cache.
+
 ## Independent shortest-length searches
 
     python scripts\scan_problem_6_3.py --max-total 25 --output data\problem-6-3-through-25.json

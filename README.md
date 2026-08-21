@@ -64,6 +64,31 @@ The expected Lean audit receipt is:
 publication endpoints, and zero project axioms
 ```
 
+## Prebuilt Lean cache
+
+Release `v1.0.0` includes source-bound project cache shards, a SHA-256
+manifest, and the camera-ready PDF. The cache contains only `.olean`,
+`.ilean`, `.trace`, and `.hash` artifacts corresponding to the public Lean
+transitive closure; it does not bundle Mathlib or abandoned/internal modules.
+
+On a checkout of the release tag, obtain Mathlib's upstream cache first, then
+download and install the project cache:
+
+```powershell
+Set-Location lean4
+lake exe cache get
+Set-Location ..
+New-Item -ItemType Directory -Force cache-assets | Out-Null
+gh release download v1.0.0 --repo crabsatellite/lattice-path-orders `
+  --dir cache-assets --pattern "lattice-path-orders-lean-cache-v1.0.0-*"
+python -B scripts\install_release_cache.py --asset-dir cache-assets
+```
+
+The installer fails closed on a commit or toolchain mismatch, verifies every
+shard before extraction, and then verifies every installed cache file against
+the release manifest. `scripts/package_release_cache.py` reproduces the
+sharding and manifest generation from a fully built public checkout.
+
 The canonical repository is
 [crabsatellite/lattice-path-orders](https://github.com/crabsatellite/lattice-path-orders).
 Versioned releases are archived through Zenodo.
